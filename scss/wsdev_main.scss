@@ -1,23 +1,49 @@
 @use "scss_partials/general" as *;
 
-.hero {
+#hero {
     .hero-wrapper {
         max-width: 1200px;
         margin: 0 auto;
         .hero-inner {
             .hero-content {
+                display: grid;
+                grid-template-columns: 1.50fr 1fr;
+                grid-gap: 20px;
                 .intro {
+                    padding-top: 150px;
+                    font-family: $font;
                     .intro-text {
-                        // styles for .intro-text
-          
+                        font-size: 1.5rem;
+                        margin-bottom: 10px;
+
                     }
                     .intro-title {
-                        // styles for .intro-title
-                        color: aqua;
+                        font-size: 3rem;
+                        margin-bottom: 10px;
+
+                    }
+                    .intro-subtitle {
+                        font-size: 1em;
+                        margin-bottom: 20px;
+
+                    }
+                    .d-buttons {
+                        display: flex;
+                        gap: 10px;
+                        .d-resume, .contact {
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                        }
                     }
                 }
                 .myImage {
-                    // styles for .myImage
+                    .header-logo {
+                        width: auto;
+                        height: auto;
+                        border-radius: 40%;
+                        padding-top: 30px;
+                    }
                 }
             }
         }
