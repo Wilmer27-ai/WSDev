@@ -1,0 +1,88 @@
+@use "scss_partials/general" as *;
+
+.nav {
+  .container {
+    height: auto;
+    margin: 0 auto;
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: #ffffff;
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 50px;
+
+        .header-logo {
+          margin-top: 10px;
+          width: 80px;
+          height: 80px;
+        }
+
+        .header-name {
+          font-family: $font;
+          margin-top: 35px;
+          margin-left: 5px;
+          color: var(--main-color); // Change to your desired hover color
+        }
+      }
+
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 90px;
+        font-family: $font;
+        font-size: 1.2rem;
+        font-weight: 700;
+        list-style: none;
+        margin-top: 35px;
+
+        a {
+          position: relative;
+          text-decoration: none;
+          color: inherit;
+          transition: color 0.3s ease;
+          display: inline-block;
+
+          // Underline effect (Bottom to Top)
+          &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 1px; // Control the line weight here
+            background-color: var(--main-color);
+            left: 0;
+            bottom: 0;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease-in-out;
+          }
+
+          &:hover::after {
+            transform: scaleY(1);
+          }
+
+          // Keep the hover color effect
+          &:hover {
+            color: var(--main-color);
+          }
+
+          // Letter hover animation
+          span {
+            display: inline-block;
+            transform: translateY(0);
+            transition: transform 0.5s ease;
+          }
+
+          &:hover span {
+            transform: translateY(-10%);
+          }
+        }
+      }
+    }
+  }
+}

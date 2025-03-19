@@ -1,0 +1,11 @@
+{
+  "name": "wsdev",
+  "version": "1.0.0",
+  "scripts": {
+    "sass": "sass --watch scss:css --no-source-map",
+    "start": "npm run sass"
+  },
+  "devDependencies": {
+    "sass": "^1.32.0"
+  }
+}

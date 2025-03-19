@@ -1,0 +1,25 @@
+@use "scss_partials/general" as *;
+
+.hero {
+    .hero-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        .hero-inner {
+            .hero-content {
+                .intro {
+                    .intro-text {
+                        // styles for .intro-text
+          
+                    }
+                    .intro-title {
+                        // styles for .intro-title
+                        color: aqua;
+                    }
+                }
+                .myImage {
+                    // styles for .myImage
+                }
+            }
+        }
+    }
+}
