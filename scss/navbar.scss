@@ -2,20 +2,25 @@
 
 .nav {
   .container {
-    height: auto;
-    margin: 0 auto;
-
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
       background-color: #ffffff;
+      max-width: 1200px;
+      margin: 0 auto;
 
       .header {
         display: flex;
         flex-direction: row;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding-left: 50px;
+        padding-left: 20px;
+
+        @include screensize($tablet) {
+          padding-left: 20px;
+        }
+
+        @include screensize($desktop) {
+          padding-left: 20px;
+        }
 
         .header-logo {
           margin-top: 10px;
@@ -32,14 +37,48 @@
       }
 
       .nav-links {
-        display: flex;
+        display: none;
         flex-direction: row;
-        gap: 90px;
+        gap: 60px;
         font-family: $font;
         font-size: 1.2rem;
         font-weight: 700;
         list-style: none;
         margin-top: 35px;
+
+        &.nav-links-visible {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+          position: absolute;
+          top: 0; // Adjust as needed
+          right: 50;
+          z-index: 1000;
+          padding: 20px;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          animation: slideDown 0.9s ease-in-out;
+
+          @keyframes slideDown {
+            from {
+              opacity: 0;
+              transform: translateY(-10%);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+
+        @include screensize($tablet) {
+          display: none;
+        }
+
+        @include screensize($desktop) {
+          display: flex;
+        }
 
         a {
           position: relative;
@@ -81,6 +120,33 @@
           &:hover span {
             transform: translateY(-10%);
           }
+        }
+      }
+
+      .menu-button {
+        font-size: 2.50rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: var(--black-color);
+        width: 50px;
+        justify-self: end; // Aligns the button to the right
+        transition: color 0.9s ease; // Add transition for hover effect
+
+        @include screensize($tablet) {
+          display: block;
+        }
+
+        @include screensize($desktop) {
+          display: none;
+        }
+
+        &.hidden {
+          display: none;
+        }
+
+        &:hover {
+          color: var(--main-color); // Change the color to blue on hover
         }
       }
     }

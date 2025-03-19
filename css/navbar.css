@@ -8,6 +8,7 @@
   --text-color: #2c3e50;
   --muted-color: #95a5a6;
   --main-color: #5271ff;
+  --black-color: #000;
 }
 
 :root html,
@@ -23,21 +24,27 @@
   padding: 0;
 }
 
-.nav .container {
-  height: auto;
-  margin: 0 auto;
-}
 .nav .container .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 .nav .container .content .header {
   display: flex;
   flex-direction: row;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 50px;
+  padding-left: 20px;
+}
+@media screen and (min-width: 712px) {
+  .nav .container .content .header {
+    padding-left: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav .container .content .header {
+    padding-left: 20px;
+  }
 }
 .nav .container .content .header .header-logo {
   margin-top: 10px;
@@ -51,14 +58,48 @@
   color: var(--main-color);
 }
 .nav .container .content .nav-links {
-  display: flex;
+  display: none;
   flex-direction: row;
-  gap: 90px;
+  gap: 60px;
   font-family: "Maven Pro", sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   list-style: none;
   margin-top: 35px;
+}
+.nav .container .content .nav-links.nav-links-visible {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 0;
+  right: 50;
+  z-index: 1000;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: slideDown 0.9s ease-in-out;
+}
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media screen and (min-width: 712px) {
+  .nav .container .content .nav-links {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav .container .content .nav-links {
+    display: flex;
+  }
 }
 .nav .container .content .nav-links a {
   position: relative;
@@ -92,4 +133,30 @@
 }
 .nav .container .content .nav-links a:hover span {
   transform: translateY(-10%);
+}
+.nav .container .content .menu-button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--black-color);
+  width: 50px;
+  justify-self: end;
+  transition: color 0.9s ease;
+}
+@media screen and (min-width: 712px) {
+  .nav .container .content .menu-button {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav .container .content .menu-button {
+    display: none;
+  }
+}
+.nav .container .content .menu-button.hidden {
+  display: none;
+}
+.nav .container .content .menu-button:hover {
+  color: var(--main-color);
 }
