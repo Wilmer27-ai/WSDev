@@ -1,51 +1,98 @@
 @use "scss_partials/general" as *;
 
 #hero {
-    .hero-wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-        .hero-inner {
-            .hero-content {
-                display: grid;
-                grid-template-columns: 1.50fr 1fr;
-                grid-gap: 20px;
-                .intro {
-                    padding-top: 150px;
-                    font-family: $font;
-                    .intro-text {
-                        font-size: 1.5rem;
-                        margin-bottom: 10px;
+  .hero-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
 
-                    }
-                    .intro-title {
-                        font-size: 3rem;
-                        margin-bottom: 10px;
+    .hero-inner {
+      .hero-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+        grid-template-areas: "intro myImage";
 
-                    }
-                    .intro-subtitle {
-                        font-size: 1em;
-                        margin-bottom: 20px;
-
-                    }
-                    .d-buttons {
-                        display: flex;
-                        gap: 10px;
-                        .d-resume, .contact {
-                            padding: 10px 20px;
-                            border: none;
-                            cursor: pointer;
-                        }
-                    }
-                }
-                .myImage {
-                    .header-logo {
-                        width: auto;
-                        height: auto;
-                        border-radius: 40%;
-                        padding-top: 30px;
-                    }
-                }
-            }
+        @include screensize($tablet) {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "myImage"
+            "intro";
         }
+
+        @include screensize($desktop) {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas: "intro myImage";
+        }
+
+        .intro {
+          grid-area: intro;
+          font-family: $font;
+
+          @include screensize($tablet) {
+            padding-top: 0;
+            padding-left: 60px;
+            padding-right: 60px;
+            justify-content: center;
+            align-items: center;
+          }
+
+          @include screensize($desktop) {
+            padding: 0;
+            padding-top: 250px;
+          }
+
+          .intro-text {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+          }
+          .intro-title {
+            font-size: 2.7rem;
+            margin-bottom: 15px;
+          }
+          .intro-subtitle {
+            font-size: 1rem;
+            margin-bottom: 20px;
+          }
+          .d-buttons {
+            display: flex;
+            gap: 10px;
+            .d-resume,
+            .contact {
+              padding: 10px 20px;
+              border: none;
+              cursor: pointer;
+            }
+          }
+        }
+        .myImage {
+          grid-area: myImage;
+          display: flex;
+          display: none;
+          @include screensize($tablet) {
+            display: block;
+          }
+          @include screensize($desktop) {
+            display: block;
+          }
+
+          .header-logo {
+            border-radius: 40%;
+            padding-top: 100px;
+
+            @include screensize($tablet) {
+              width: 400px;
+              height: 400px;
+              border-radius: 40%;
+              display: block;
+            }
+            @include screensize($desktop) {
+              width: auto;
+              height: auto;
+              display: block;
+            }
+          }
+        }
+      }
     }
+  }
 }

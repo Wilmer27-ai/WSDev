@@ -30,37 +30,94 @@
 }
 #hero .hero-wrapper .hero-inner .hero-content {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
+  grid-template-areas: "intro myImage";
+}
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content {
+    grid-template-columns: 1fr;
+    grid-template-areas: "myImage" "intro";
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro myImage";
+  }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro {
-  padding-top: 150px;
+  grid-area: intro;
   font-family: "Maven Pro", sans-serif;
 }
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro {
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 60px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro {
+    padding: 0;
+    padding-top: 250px;
+  }
+}
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-text {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: 2.7rem;
+  margin-bottom: 15px;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-subtitle {
-  font-size: 1em;
+  font-size: 1rem;
   margin-bottom: 20px;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons {
   display: flex;
   gap: 10px;
 }
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume,
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
   padding: 10px 20px;
   border: none;
   cursor: pointer;
 }
+#hero .hero-wrapper .hero-inner .hero-content .myImage {
+  grid-area: myImage;
+  display: flex;
+  display: none;
+}
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content .myImage {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content .myImage {
+    display: block;
+  }
+}
 #hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
-  width: auto;
-  height: auto;
   border-radius: 40%;
-  padding-top: 30px;
+  padding-top: 100px;
+}
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
+    width: 400px;
+    height: 400px;
+    border-radius: 40%;
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
+    width: auto;
+    height: auto;
+    display: block;
+  }
 }
