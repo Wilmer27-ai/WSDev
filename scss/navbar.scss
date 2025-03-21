@@ -20,35 +20,37 @@
       align-items: center;
       max-width: 1200px;
       margin: 0 auto;
-      padding: 15px 20px;
+      padding: 0px 20px 0px 20px;
 
       .header {
         display: flex;
         align-items: center;
 
         .header-logo {
-          width: 80px;
-          height: 80px;
+          width: 70px;
+          height: 70px;
           opacity: 0; // Initially hidden
         }
 
-        .header-name {
-          font-family: $font;
-          color: var(--main-color);
-          margin-left: 10px;
-          font-size: 1.5rem;
-          opacity: 0;
-          animation: fadeIn 1s forwards 0.5s;
-        }
       }
 
       .nav-links {
         display: flex;
-        gap: 50px;
+        gap: 15px;
         list-style: none;
         font-family: $font;
-        font-size: 1.2rem;
-        font-weight: 700;
+        font-size: 1rem;
+        font-weight: 200;
+
+        @include screensize($tablet) {
+          gap: 45px;
+          font-size: 1.2rem;
+        }
+
+        @include screensize($desktop) {
+          gap: 50px;
+          font-size: 1.2rem;
+        }
 
         li {
           opacity: 0; // Initially hidden

@@ -6,9 +6,10 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --muted-color: #95a5a6;
+  --muted-color: #eee;
   --main-color: #5271ff;
   --black-color: #000;
+  --button-color: #5b5b5b;
 }
 
 :root html,
@@ -42,32 +43,36 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 0px 20px 0px 20px;
 }
 .nav .container .content .header {
   display: flex;
   align-items: center;
 }
 .nav .container .content .header .header-logo {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   opacity: 0;
-}
-.nav .container .content .header .header-name {
-  font-family: "Maven Pro", sans-serif;
-  color: var(--main-color);
-  margin-left: 10px;
-  font-size: 1.5rem;
-  opacity: 0;
-  animation: fadeIn 1s forwards 0.5s;
 }
 .nav .container .content .nav-links {
   display: flex;
-  gap: 50px;
+  gap: 15px;
   list-style: none;
   font-family: "Maven Pro", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 200;
+}
+@media screen and (min-width: 712px) {
+  .nav .container .content .nav-links {
+    gap: 45px;
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav .container .content .nav-links {
+    gap: 50px;
+    font-size: 1.2rem;
+  }
 }
 .nav .container .content .nav-links li {
   opacity: 0;

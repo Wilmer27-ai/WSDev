@@ -7,30 +7,36 @@
 
     .hero-inner {
       .hero-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: column;
         grid-gap: 20px;
         grid-template-areas: "intro myImage";
+        opacity: 0;
+        transform: translateY(30px);
+        animation: fadeInUp 1s ease-in-out forwards;
 
         @include screensize($tablet) {
-          grid-template-columns: 1fr;
-          grid-template-areas:
-            "myImage"
-            "intro";
+          padding-left: 40px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
         }
 
         @include screensize($desktop) {
+          display: grid;
           grid-template-columns: 1fr 1fr;
           grid-template-areas: "intro myImage";
+          padding-left: 90px;
         }
 
         .intro {
           grid-area: intro;
           font-family: $font;
+          padding: 20px;
+          padding-top: 100px;
 
           @include screensize($tablet) {
-            padding-top: 0;
-            padding-left: 60px;
+            padding-top: 200px;
+            padding-left: 20px;
             padding-right: 60px;
             justify-content: center;
             align-items: center;
@@ -38,61 +44,138 @@
 
           @include screensize($desktop) {
             padding: 0;
-            padding-top: 250px;
+            padding-top: 230px;
           }
 
           .intro-text {
             font-size: 1.3rem;
             margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
           }
+
           .intro-title {
             font-size: 2.7rem;
             margin-bottom: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1s forwards;
           }
+
           .intro-subtitle {
             font-size: 1rem;
             margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 1.5s forwards;
           }
+
           .d-buttons {
             display: flex;
-            gap: 10px;
-            .d-resume,
-            .contact {
-              padding: 10px 20px;
+            gap: 15px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 2s forwards;
+
+            .d-resume, .contact {
+              padding: 15px 40px;
               border: none;
               cursor: pointer;
+              border-radius: 50px;
+              font-size: 1rem;
+              font-weight: 600;
+              transition: all 0.5s ease;
+            }
+            
+            .d-resume {
+              color: var(--button-color);
+              background-color: var(--muted-color);
+              
+              &:hover {
+                color: var(--main-color);
+                background-color: var(--muted-color);
+              }
+            }
+
+            .contact {
+              color: #fff;
+              background-color: var(--button-color);
+              
+              &:hover {
+                background-color: var(--main-color);
+              }
             }
           }
         }
+
         .myImage {
           grid-area: myImage;
           display: flex;
-          display: none;
+          opacity: 0;
+          animation: fadeIn 1s ease-in-out 2.5s forwards;
+
           @include screensize($tablet) {
             display: block;
+
           }
           @include screensize($desktop) {
             display: block;
           }
-
-          .header-logo {
-            border-radius: 40%;
-            padding-top: 100px;
+            .hero-logo {
+            border-radius: 90%;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            
 
             @include screensize($tablet) {
-              width: 400px;
-              height: 400px;
+              width: 300px;
+              height: 300px;
               border-radius: 40%;
               display: block;
+              padding-top: 220px;
             }
             @include screensize($desktop) {
               width: auto;
               height: auto;
+              border-radius: 40%;
               display: block;
+              padding-top: 120px;
             }
           }
         }
       }
     }
+  }
+}
+
+#name {
+  transition: opacity 1s ease-in-out;
+  color: var(--main-color);
+
+  &.fade-out {
+    opacity: 0;
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

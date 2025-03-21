@@ -6,9 +6,10 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --muted-color: #95a5a6;
+  --muted-color: #eee;
   --main-color: #5271ff;
   --black-color: #000;
+  --button-color: #5b5b5b;
 }
 
 :root html,
@@ -29,31 +30,39 @@
   margin: 0 auto;
 }
 #hero .hero-wrapper .hero-inner .hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   grid-gap: 20px;
   grid-template-areas: "intro myImage";
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content {
-    grid-template-columns: 1fr;
-    grid-template-areas: "myImage" "intro";
+    padding-left: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "intro myImage";
+    padding-left: 90px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro {
   grid-area: intro;
   font-family: "Maven Pro", sans-serif;
+  padding: 20px;
+  padding-top: 100px;
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro {
-    padding-top: 0;
-    padding-left: 60px;
+    padding-top: 200px;
+    padding-left: 20px;
     padding-right: 60px;
     justify-content: center;
     align-items: center;
@@ -62,35 +71,62 @@
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro {
     padding: 0;
-    padding-top: 250px;
+    padding-top: 230px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-text {
   font-size: 1.3rem;
   margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
   font-size: 2.7rem;
   margin-bottom: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-subtitle {
   font-size: 1rem;
   margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons {
   display: flex;
-  gap: 10px;
+  gap: 15px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2s forwards;
 }
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume,
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-  padding: 10px 20px;
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume {
+  color: var(--button-color);
+  background-color: var(--muted-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume:hover {
+  color: var(--main-color);
+  background-color: var(--muted-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+  color: #fff;
+  background-color: var(--button-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact:hover {
+  background-color: var(--main-color);
 }
 #hero .hero-wrapper .hero-inner .hero-content .myImage {
   grid-area: myImage;
   display: flex;
-  display: none;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content .myImage {
@@ -102,22 +138,57 @@
     display: block;
   }
 }
-#hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
-  border-radius: 40%;
-  padding-top: 100px;
+#hero .hero-wrapper .hero-inner .hero-content .myImage .hero-logo {
+  border-radius: 90%;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
 @media screen and (min-width: 712px) {
-  #hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
-    width: 400px;
-    height: 400px;
+  #hero .hero-wrapper .hero-inner .hero-content .myImage .hero-logo {
+    width: 300px;
+    height: 300px;
     border-radius: 40%;
     display: block;
+    padding-top: 220px;
   }
 }
 @media screen and (min-width: 1024px) {
-  #hero .hero-wrapper .hero-inner .hero-content .myImage .header-logo {
+  #hero .hero-wrapper .hero-inner .hero-content .myImage .hero-logo {
     width: auto;
     height: auto;
+    border-radius: 40%;
     display: block;
+    padding-top: 120px;
+  }
+}
+
+#name {
+  transition: opacity 1s ease-in-out;
+  color: var(--main-color);
+}
+#name.fade-out {
+  opacity: 0;
+}
+#name.fade-in {
+  opacity: 1;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
