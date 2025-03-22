@@ -32,7 +32,8 @@
           grid-area: intro;
           font-family: $font;
           padding: 20px;
-          padding-top: 100px;
+          padding-top: 150px;
+          padding-bottom: 100px;
 
           @include screensize($tablet) {
             padding-top: 200px;

@@ -13,6 +13,18 @@
     }
   }
   
+  body {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    overflow-y: auto;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   $tablet: 712px;
   $desktop: 1024px;
   $desktop-md: 1200px;

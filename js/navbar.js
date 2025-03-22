@@ -27,4 +27,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const text = link.textContent.trim();
         link.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
     });
+
+    // Hide/show navbar on scroll
+    let lastScrollTop = 0;
+    window.addEventListener("scroll", function () {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        if (scrollTop > lastScrollTop) {
+            // Scroll down
+            nav.classList.add("nav-hide");
+        } else {
+            // Scroll up
+            nav.classList.remove("nav-hide");
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+    });
 });

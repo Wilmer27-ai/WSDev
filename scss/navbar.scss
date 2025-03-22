@@ -5,12 +5,16 @@
   width: 100%;
   top: -100px; // Initially hidden
   left: 0;
-  background: white;
+  background: rgba(255, 255, 255, .9);
   z-index: 1000;
-  transition: top 1s ease-in-out;
+  transition: top 0.3s ease-in-out;
 
   &.nav-animate {
     top: 0; // Slides down smoothly
+  }
+
+  &.nav-hide {
+    top: -100px; // Adjust this value based on your navbar height
   }
 
   .container {
@@ -31,7 +35,6 @@
           height: 70px;
           opacity: 0; // Initially hidden
         }
-
       }
 
       .nav-links {

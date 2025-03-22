@@ -25,17 +25,32 @@
   padding: 0;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 .nav {
   position: fixed;
   width: 100%;
   top: -100px;
   left: 0;
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 1000;
-  transition: top 1s ease-in-out;
+  transition: top 0.3s ease-in-out;
 }
 .nav.nav-animate {
   top: 0;
+}
+.nav.nav-hide {
+  top: -100px;
 }
 .nav .container .content {
   display: flex;

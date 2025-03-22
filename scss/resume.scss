@@ -1,0 +1,120 @@
+@use "scss_partials/general" as *;
+
+#resume {
+  height: 54vh;
+  .wrapper {
+    .inner {
+      max-width: 1200px;
+      margin: 0 auto;
+
+      .resume-header {
+        text-align: center;
+        margin-bottom: 60px;
+        h1 {
+            font-family: $font;
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: #333;
+        }
+    }
+      .content {
+        padding-bottom: 100px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        @include screensize($tablet) {
+          grid-template-columns: 1fr 2fr;
+        }
+        @include screensize($desktop) {
+          grid-template-columns: 1fr 2fr;
+        }
+        .image {
+            display: none;
+            @include screensize($tablet) {
+              display: block;
+              @include screensize($desktop) {
+                display: block;
+              }
+              img {
+                border-radius: 60%;
+              }
+            }
+        }
+        .resume-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          .name-container {
+            h1 {
+              display: flex;
+              flex-direction: column;
+              background-color: var(--muted-color);
+              border-radius: 10px;
+              font-family: $font;
+              font-size: 2rem;
+              font-weight: 500;
+              color: black;
+              margin-right: 20px;
+              margin-left: 20px;
+              padding: 20px;
+              padding-left: 35px;
+            }
+          }
+          .info-container {
+            margin: 0;
+            font-family: $font;
+            font-size: 1.2rem;
+            background-color: var(--muted-color);
+            border-radius: 10px;
+            padding: 20px;
+            padding-left: 35px;
+            padding-right: 35px;
+            margin-right: 20px;
+            margin-left: 20px;
+            p {
+              color: black;
+            }
+          }
+          .skills-container {
+            background-color: var(--muted-color);
+            border-radius: 10px;
+            padding: 35px;
+            margin-right: 20px;
+            margin-left: 20px;
+            h2 {
+              font-family: $font;
+              font-size: 1.2rem;
+              font-weight: 200;
+              color: black;
+              margin-bottom: 10px;
+
+            }
+            ul {
+              list-style: none;
+              padding: 0;
+              display: flex;
+              flex-wrap: wrap;
+              gap: 15px;
+              li {
+                display: flex;
+                align-items: center;
+                font-family: $font;
+                font-size: 1.2rem;
+                color: black;
+                img {
+                  margin-right: 10px;
+                  width: 60px;
+                  height: 60px;
+                  transition: transform 0.3s ease, color 0.3s ease;
+                }
+                &:hover img {
+                  transform: scale(1.2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

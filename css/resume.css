@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap");
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --muted-color: #eee;
+  --main-color: #5271ff;
+  --black-color: #000;
+  --button-color: #5b5b5b;
+}
+
+:root html,
+:root body,
+:root ul,
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#resume {
+  height: 54vh;
+}
+#resume .wrapper .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#resume .wrapper .inner .resume-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+#resume .wrapper .inner .resume-header h1 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #333;
+}
+#resume .wrapper .inner .content {
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+@media screen and (min-width: 712px) {
+  #resume .wrapper .inner .content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #resume .wrapper .inner .content {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+#resume .wrapper .inner .content .image {
+  display: none;
+}
+@media screen and (min-width: 712px) {
+  #resume .wrapper .inner .content .image {
+    display: block;
+  }
+}
+@media screen and (min-width: 712px) and (min-width: 1024px) {
+  #resume .wrapper .inner .content .image {
+    display: block;
+  }
+}
+@media screen and (min-width: 712px) {
+  #resume .wrapper .inner .content .image img {
+    border-radius: 60%;
+  }
+}
+#resume .wrapper .inner .content .resume-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#resume .wrapper .inner .content .resume-info .name-container h1 {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--muted-color);
+  border-radius: 10px;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+  color: black;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 20px;
+  padding-left: 35px;
+}
+#resume .wrapper .inner .content .resume-info .info-container {
+  margin: 0;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.2rem;
+  background-color: var(--muted-color);
+  border-radius: 10px;
+  padding: 20px;
+  padding-left: 35px;
+  padding-right: 35px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#resume .wrapper .inner .content .resume-info .info-container p {
+  color: black;
+}
+#resume .wrapper .inner .content .resume-info .skills-container {
+  background-color: var(--muted-color);
+  border-radius: 10px;
+  padding: 35px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+#resume .wrapper .inner .content .resume-info .skills-container h2 {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: black;
+  margin-bottom: 10px;
+}
+#resume .wrapper .inner .content .resume-info .skills-container ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+#resume .wrapper .inner .content .resume-info .skills-container ul li {
+  display: flex;
+  align-items: center;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 1.2rem;
+  color: black;
+}
+#resume .wrapper .inner .content .resume-info .skills-container ul li img {
+  margin-right: 10px;
+  width: 60px;
+  height: 60px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+#resume .wrapper .inner .content .resume-info .skills-container ul li:hover img {
+  transform: scale(1.2);
+}

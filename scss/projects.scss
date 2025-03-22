@@ -1,0 +1,125 @@
+@use "scss_partials/general" as *;
+
+#projects {
+    height: auto;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .inner {
+            .content {
+                padding-top: 100px;
+                padding-bottom: 100px;
+                padding-left: 40px;
+                padding-right: 40px;
+
+                .projects-header {
+                    text-align: center;
+                    margin-bottom: 60px;
+                    h1 {
+                        font-family: $font;
+                        font-size: 2.5rem;
+                        font-weight: 200;
+                        color: #333;
+                    }
+                }
+
+                .projects-container {
+                    position: relative;
+                    width: 100%;
+                    overflow: visible;
+                    border-radius: 10px;
+                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+                    background: #fff;
+
+                    .projects-slide {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100%;
+                        position: relative;
+
+                        .image-container {
+                            position: relative;
+                            width: 100%;
+                            height: auto;
+                            border-radius: 8px;
+                            overflow: hidden;
+
+                            img {
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 8px;
+                                transition: opacity 0.5s ease-in-out;
+                            }
+
+                            .details-overlay {
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                background: rgba(0, 0, 0, 0.7);
+                                color: #fff;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                align-items: center;
+                                opacity: 0;
+                                transition: opacity 0.5s ease-in-out;
+                                border-radius: 8px;
+                                text-align: center;
+                                padding: 20px;
+                            }
+
+                            &:hover .details-overlay {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    .prev, .next {
+                        position: absolute;
+                        top: 50%;
+                        color: rgb(1, 1, 1);
+                        border: none;
+                        padding: 0;
+                        cursor: pointer;
+                        font-size: 50px;
+                        background: none;
+                        transform: translateY(-50%);
+                        z-index: 10;
+                    }
+
+                    .prev {
+                        left: -40px;
+                    }
+
+                    .next {
+                        right: -40px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
