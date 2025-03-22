@@ -1,16 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projects = [
         {
-            image: "assets/project1.png",
-            details: "Project 1: A web application using HTML, CSS, and JavaScript.",
-            techStack: ["HTML", "CSS", "JavaScript"],
-            link: "https://google.com"
+            image: "assets/callbox-ebook-page.png",
+            details: "The revamped Callbox Ebooks page features a modern design built with SASS, PHP, and HTML, ensuring improved aesthetics, user experience, and efficient content management.",
+            techStack: ["HTML", "CSS", "PHP"],
+            link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
         },
         {
-            image: "assets/project2.png",
-            details: "Project 2: A mobile app developed with React Native.",
-            techStack: ["React Native", "JavaScript"],
-            link: "https://google.com"
+            image: "assets/industries-we-serve.png",
+            details: "The Industries We Serve page was redesigned using HTML, CSS, and PHP to enhance its structure, visual appeal, and functionality.",
+            techStack: ["HTML", "PHP", "CSS"],
+            link: "https://staging.callboxinc.com/wilmer-v2/#"
         }
     ];
 

@@ -39,6 +39,10 @@ html {
 
 #resume {
   height: 54vh;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 #resume .wrapper .inner {
   max-width: 1200px;
@@ -53,12 +57,16 @@ html {
   font-size: 2.5rem;
   font-weight: 200;
   color: #333;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 #resume .wrapper .inner .content {
   padding-bottom: 100px;
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
 }
 @media screen and (min-width: 712px) {
   #resume .wrapper .inner .content {
@@ -86,12 +94,16 @@ html {
 @media screen and (min-width: 712px) {
   #resume .wrapper .inner .content .image img {
     border-radius: 60%;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 1.5s forwards;
   }
 }
 #resume .wrapper .inner .content .resume-info {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2s forwards;
 }
 #resume .wrapper .inner .content .resume-info .name-container h1 {
   display: flex;
@@ -106,6 +118,8 @@ html {
   margin-left: 20px;
   padding: 20px;
   padding-left: 35px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2.5s forwards;
 }
 #resume .wrapper .inner .content .resume-info .info-container {
   margin: 0;
@@ -118,6 +132,8 @@ html {
   padding-right: 35px;
   margin-right: 20px;
   margin-left: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3s forwards;
 }
 #resume .wrapper .inner .content .resume-info .info-container p {
   color: black;
@@ -128,6 +144,8 @@ html {
   padding: 35px;
   margin-right: 20px;
   margin-left: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 3.5s forwards;
 }
 #resume .wrapper .inner .content .resume-info .skills-container h2 {
   font-family: "Maven Pro", sans-serif;
@@ -158,4 +176,23 @@ html {
 }
 #resume .wrapper .inner .content .resume-info .skills-container ul li:hover img {
   transform: scale(1.2);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
