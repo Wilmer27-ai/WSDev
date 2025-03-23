@@ -1,19 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
     const projects = [
         {
-            image: "assets/callbox-ebook-page.png",
+            image: "assets/callbox-ebook-page.webp",
             details: "The revamped Callbox Ebooks page features a modern design built with SASS, PHP, and HTML, ensuring improved aesthetics, user experience, and efficient content management.",
             techStack: ["HTML", "SASS", "PHP"],
             link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
         },
         {
-            image: "assets/industries-we-serve.png",
+            image: "assets/industries-we-serve.webp",
             details: "The Industries We Serve page was redesigned using HTML, CSS, and PHP to enhance its structure, visual appeal, and functionality.",
             techStack: ["HTML", "PHP", "CSS"],
             link: "https://staging.callboxinc.com/wilmer-v2/#"
         },
         {
-            image: "assets/trashTrade.png",
+            image: "assets/trashTrade.webp",
             details: "The TrashTrade Admin Panel utilizes JavaScript, Bootstrap, and Firebase API to provide a responsive interface with real-time user, transaction, and reward management.",
         techStack: ["HTML", "JAVA SCRIPT", "BOOTSTRAP", "FIREBASE"],
             link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html"
