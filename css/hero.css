@@ -37,6 +37,15 @@ html {
   scroll-behavior: smooth;
 }
 
+#hero {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+#hero.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
 #hero .hero-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -74,7 +83,7 @@ html {
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro {
-    padding-top: 200px;
+    padding-top: 270px;
     padding-left: 20px;
     padding-right: 60px;
     justify-content: center;
@@ -84,7 +93,7 @@ html {
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro {
     padding: 0;
-    padding-top: 230px;
+    padding-top: 270px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-text {
@@ -163,7 +172,7 @@ html {
     height: 300px;
     border-radius: 40%;
     display: block;
-    padding-top: 220px;
+    padding-top: 250px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -172,7 +181,7 @@ html {
     height: auto;
     border-radius: 40%;
     display: block;
-    padding-top: 120px;
+    padding-top: 200px;
   }
 }
 

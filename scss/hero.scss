@@ -1,6 +1,14 @@
 @use "scss_partials/general" as *;
 
 #hero {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
   .hero-wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -36,7 +44,7 @@
           padding-bottom: 100px;
 
           @include screensize($tablet) {
-            padding-top: 200px;
+            padding-top: 270px;
             padding-left: 20px;
             padding-right: 60px;
             justify-content: center;
@@ -45,7 +53,7 @@
 
           @include screensize($desktop) {
             padding: 0;
-            padding-top: 230px;
+            padding-top: 270px;
           }
 
           .intro-text {
@@ -131,14 +139,14 @@
               height: 300px;
               border-radius: 40%;
               display: block;
-              padding-top: 220px;
+              padding-top: 250px;
             }
             @include screensize($desktop) {
               width: auto;
               height: auto;
               border-radius: 40%;
               display: block;
-              padding-top: 120px;
+              padding-top: 200px;
             }
           }
         }

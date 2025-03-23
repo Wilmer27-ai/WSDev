@@ -25,3 +25,25 @@ document.addEventListener("DOMContentLoaded", function() {
     // Run the text change every 4 seconds
     setInterval(changeText, 4000);
 });
+
+
+//click copy effects
+document.getElementById('facebook-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    copyToClipboard('Wilmer Suelo');
+});
+
+document.getElementById('phone-link').addEventListener('click', function(event) {
+    event.preventDefault();
+    copyToClipboard('+639469485103');
+});
+
+function copyToClipboard(text) {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+    alert('Copied to clipboard: ' + text);
+}

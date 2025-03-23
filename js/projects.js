@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
         {
             image: "assets/callbox-ebook-page.png",
             details: "The revamped Callbox Ebooks page features a modern design built with SASS, PHP, and HTML, ensuring improved aesthetics, user experience, and efficient content management.",
-            techStack: ["HTML", "CSS", "PHP"],
+            techStack: ["HTML", "SASS", "PHP"],
             link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
         },
         {

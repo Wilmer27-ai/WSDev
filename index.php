@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/resume.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/contact.css">
-    
 </head>
 <body>
     <?php include 'navbar.php'; ?>
@@ -22,8 +21,8 @@
                         <h1 class="intro-title">Hi, I'm <span id="name">Wilmer Suelo</span></h1>
                         <p class="intro-subtitle">A Software Technology student specializing in front-end development, creating smooth and interactive web experiences. Constantly improving and refining my skills!</p>
                         <div class="d-buttons">
-                            <button class="d-resume">Download Resume</button>
-                            <button class="contact">Contact</button>
+                            <button class="d-resume" onclick="alert('Coming Soon!')">Download Resume</button>
+                            <button class="contact" onclick="location.href='#contact'">Contact</button>
                         </div>
                     </div>
                     <div class="myImage">
@@ -57,9 +56,9 @@
     <section id="resume">
         <div class="wrapper">
             <div class="inner">
-            <div class="resume-header">
-                        <h1>Building with These Technologies</h1>
-                    </div>
+                <div class="resume-header">
+                    <h1>Building with These Technologies</h1>
+                </div>
                 <div class="content">
                     <div class="image">
                         <img src="assets/image2.svg" style="height: 100%; width: 100%;" alt="Resume Image">
@@ -89,46 +88,46 @@
             </div>
         </div>    
     </section>
-    ...
-<section id="contact">
-    <div class="contact-wrapper">
-        <div class="contact-inner">
-            <div class="contact-content">
-                <div class="contact-header">
-                    <h1>Get in Touch</h1>
-                </div>
-                <div class="contact-form">
-                    <div class="contact-card">
-                        <div class="name-role">
-                            <h2>Wilmer Suelo</h2>
-                            <p>Front-end Developer</p>
-                            <p>Let’s collaborate! Feel free to reach out for opportunities, projects, or just to chat about web development.</p>
-                        </div>
-                        <div class="social-media">
-                            <div class="column">
-                                <ul>
-                                    <li><a href="https://www.facebook.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Facebook</a></li>
-                                    <li><a href="mailto:suelowilmer27@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo"> Gmail</a></li>
-                                    <li><a href="https://github.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo"> GitHub</a></li>
-                                </ul>
+    <section id="contact">
+        <div class="contact-wrapper">
+            <div class="contact-inner">
+                <div class="contact-content">
+                    <div class="contact-header">
+                        <h1>Get in Touch</h1>
+                    </div>
+                    <div class="contact-form">
+                        <div class="contact-card">
+                            <div class="name-role">
+                                <h2>Wilmer Suelo</h2>
+                                <p>Front-end Developer</p>
+                                <p>Let’s collaborate! Feel free to reach out for opportunities, projects, or just to chat about web development.</p>
                             </div>
-                            <div class="column">
-                                <ul>
-                                    <li><a href="https://www.linkedin.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo"> LinkedIn</a></li>
-                                    <li><a href="https://www.instagram.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"> Instagram</a></li>
-                                    <li><a href="09469485103"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone Logo"> +639469485103</a></li>
-                                </ul>
+                            <div class="social-media">
+                                <div class="column">
+                                    <ul>
+                                        <li><a href="Wilmer Suelo" id="facebook-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Facebook</a></li>
+                                        <li><a href="mailto:suelowilmer27@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo"> Gmail</a></li>
+                                        <li><a href="https://github.com/Wilmer27-ai" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo"> GitHub</a></li>
+                                    </ul>
+                                </div>
+                                <div class="column">
+                                    <ul>
+                                        <li><a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo"> LinkedIn</a></li>
+                                        <li><a href="https://www.instagram.com/wilmer_suelo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"> Instagram</a></li>
+                                        <li><a href="#" id="phone-link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone Logo"> +639469485103</a></li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
     <script src="js/projects.js"></script>
     <script src="js/hero.js"></script>
     <script src="js/navbar.js"></script>
+    <script src="js/scrollEffects.js"></script>
     <?php include 'footer.php'; ?>
 </body>
 </html>

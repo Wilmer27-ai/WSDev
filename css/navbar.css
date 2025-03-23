@@ -56,18 +56,28 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 20px 10px;
 }
-.nav .container .header {
+@media screen and (min-width: 712px) {
+  .nav .container {
+    padding: 20px 100px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .nav .container {
+    padding: 20px 100px;
+  }
+}
+.nav .header {
   display: flex;
   align-items: center;
 }
-.nav .container .header .header-logo {
+.nav .header .header-logo {
   width: 70px;
   height: 70px;
   opacity: 0;
 }
-.nav .container .nav-links {
+.nav .nav-links {
   display: flex;
   gap: 10px;
   list-style: none;
@@ -76,29 +86,29 @@ html {
   font-weight: 200;
 }
 @media screen and (min-width: 712px) {
-  .nav .container .nav-links {
+  .nav .nav-links {
     gap: 45px;
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .nav .container .nav-links {
+  .nav .nav-links {
     gap: 50px;
     font-size: 1.2rem;
   }
 }
-.nav .container .nav-links li {
+.nav .nav-links li {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-.nav .container .nav-links li a {
+.nav .nav-links li a {
   position: relative;
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
   display: inline-block;
 }
-.nav .container .nav-links li a::after {
+.nav .nav-links li a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -110,18 +120,18 @@ html {
   transform-origin: bottom;
   transition: transform 0.4s ease-in-out;
 }
-.nav .container .nav-links li a:hover::after {
+.nav .nav-links li a:hover::after {
   transform: scaleY(1);
 }
-.nav .container .nav-links li a:hover {
+.nav .nav-links li a:hover {
   color: var(--main-color);
 }
-.nav .container .nav-links li a span {
+.nav .nav-links li a span {
   display: inline-block;
   transform: translateY(0);
   transition: transform 2s ease;
 }
-.nav .container .nav-links li a:hover span {
+.nav .nav-links li a:hover span {
   transform: translateY(-10%);
 }
 
