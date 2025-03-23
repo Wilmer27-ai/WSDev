@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector(".nav");
     const logo = document.querySelector(".header-logo");
-    const navLinks = document.querySelectorAll(".nav-links li a");
+    const navLinks = document.querySelectorAll(".nav-links li");
 
     // Show navbar smoothly
     setTimeout(() => {
@@ -17,15 +17,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // Slide down nav links one by one
     navLinks.forEach((link, index) => {
         setTimeout(() => {
-            link.parentElement.classList.add("animate__animated", "animate__bounceInDown");
-            link.parentElement.style.opacity = "1"; // Make sure they appear
+            link.classList.add("animate__animated", "animate__bounceInDown");
+            link.style.opacity = "1"; // Make sure they appear
         }, 600 + index * 200);
     });
 
     // Letter animation inside nav links
     navLinks.forEach(link => {
-        const text = link.textContent.trim();
-        link.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
+        const anchor = link.querySelector("a");
+        const text = anchor.textContent.trim();
+        anchor.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
     });
 
     // Hide/show navbar on scroll
