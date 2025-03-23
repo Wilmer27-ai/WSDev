@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap");
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --muted-color: #eee;
+  --main-color: #5271ff;
+  --black-color: #000;
+  --button-color: #5b5b5b;
+}
+
+:root html,
+:root body,
+:root ul,
+:root h1,
+:root h2,
+:root h3,
+:root h4,
+:root h5,
+:root ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  width: auto;
+  overflow-y: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.footer-wrapper {
+  background-color: var(--main-color);
+  color: #fff;
+  padding: 20px 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease-in-out forwards;
+}
+.footer-wrapper .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer-wrapper .footer-content {
+  text-align: center;
+}
+.footer-wrapper .footer-content p {
+  margin: 0;
+  font-size: 0.9em;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

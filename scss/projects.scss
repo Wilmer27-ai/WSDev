@@ -24,7 +24,7 @@
 
                 .projects-header {
                     text-align: center;
-                    margin-bottom: 60px;
+                    margin-bottom: 40px;
                     h1 {
                         font-family: $font;
                         font-size: 2.5rem;
@@ -86,7 +86,7 @@
 
 
                                 p {
-                                    font-size: 1rem;
+                                    font-size: 0.9rem;
                                     margin-bottom: 20px;
                                     font-family: $font;
                                     padding-left: 10px;
@@ -95,10 +95,12 @@
                                     @include screensize(tablet) {
                                         padding-left: 150px;
                                         padding-right: 150px;
+                                        font-size: 1rem;
                                     }
                                     @include screensize($desktop) {
                                         padding-left: 150px;
                                         padding-right: 150px;
+                                        font-size: 1rem;
                                     }
                                 }
 
@@ -119,13 +121,26 @@
                                 .tech-stack {
                                     display: flex;
                                     flex-wrap: wrap;
-                                    gap: 10px;
+                                    gap: 5px;
+
+                                    @include screensize(tablet) {
+                                        gap: 10px;
+                                    }
+                                    @include screensize($desktop) {
+                                        gap: 10px;
+                                    }
 
                                     span {
                                         background: var(--main-color);
                                         padding: 5px 10px;
                                         border-radius: 5px;
-                                        font-size: 1rem;
+                                        font-size: 0.8rem;
+                                        @include screensize(tablet) {
+                                            font-size: 1rem;;
+                                        }
+                                        @include screensize($desktop) {
+                                            font-size: 1rem;;
+                                        }
                                     }
                                 }
                             }

@@ -42,9 +42,9 @@ html {
   width: 100%;
   top: -100px;
   left: 0;
-  background: rgba(255, 255, 255, 0.9);
   z-index: 1000;
   transition: top 0.3s ease-in-out;
+  background: rgba(255, 255, 255, 0.9);
 }
 .nav.nav-animate {
   top: 0;
@@ -52,55 +52,53 @@ html {
 .nav.nav-hide {
   top: -100px;
 }
-.nav .container .content {
+.nav .container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0px 20px 0px 20px;
+  padding: 0 20px;
 }
-.nav .container .content .header {
+.nav .container .header {
   display: flex;
   align-items: center;
 }
-.nav .container .content .header .header-logo {
+.nav .container .header .header-logo {
   width: 70px;
   height: 70px;
   opacity: 0;
 }
-.nav .container .content .nav-links {
+.nav .container .nav-links {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   list-style: none;
   font-family: "Maven Pro", sans-serif;
   font-size: 1rem;
   font-weight: 200;
 }
 @media screen and (min-width: 712px) {
-  .nav .container .content .nav-links {
+  .nav .container .nav-links {
     gap: 45px;
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .nav .container .content .nav-links {
+  .nav .container .nav-links {
     gap: 50px;
     font-size: 1.2rem;
   }
 }
-.nav .container .content .nav-links li {
+.nav .container .nav-links li {
   opacity: 0;
   animation-fill-mode: forwards;
 }
-.nav .container .content .nav-links li a {
+.nav .container .nav-links li a {
   position: relative;
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
   display: inline-block;
 }
-.nav .container .content .nav-links li a::after {
+.nav .container .nav-links li a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -112,18 +110,18 @@ html {
   transform-origin: bottom;
   transition: transform 0.4s ease-in-out;
 }
-.nav .container .content .nav-links li a:hover::after {
+.nav .container .nav-links li a:hover::after {
   transform: scaleY(1);
 }
-.nav .container .content .nav-links li a:hover {
+.nav .container .nav-links li a:hover {
   color: var(--main-color);
 }
-.nav .container .content .nav-links li a span {
+.nav .container .nav-links li a span {
   display: inline-block;
   transform: translateY(0);
   transition: transform 2s ease;
 }
-.nav .container .content .nav-links li a:hover span {
+.nav .container .nav-links li a:hover span {
   transform: translateY(-10%);
 }
 

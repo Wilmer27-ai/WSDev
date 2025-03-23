@@ -1,7 +1,7 @@
 @use "scss_partials/general" as *;
 
 #resume {
-  height: 54vh;
+  height: auto;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 1s ease-in-out forwards;
@@ -26,7 +26,7 @@
       }
 
       .content {
-        padding-bottom: 100px;
+        padding-bottom: 200px;
         display: grid;
         grid-template-columns: 1fr;
         gap: 20px;

@@ -11,7 +11,14 @@ document.addEventListener("DOMContentLoaded", function () {
             details: "The Industries We Serve page was redesigned using HTML, CSS, and PHP to enhance its structure, visual appeal, and functionality.",
             techStack: ["HTML", "PHP", "CSS"],
             link: "https://staging.callboxinc.com/wilmer-v2/#"
+        },
+        {
+            image: "assets/trashTrade.png",
+            details: "The TrashTrade Admin Panel utilizes JavaScript, Bootstrap, and Firebase API to provide a responsive interface with real-time user, transaction, and reward management.",
+        techStack: ["HTML", "JAVA SCRIPT", "BOOTSTRAP", "FIREBASE"],
+            link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html"
         }
+
     ];
 
     let currentIndex = 0;

@@ -10,17 +10,15 @@
 <body>
     <nav class="nav">
         <div class="container">
-            <div class="content">
-                <div class="header">
-                    <img src="assets/myLogo.svg" alt="Logo" class="header-logo">
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#hero">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
+            <div class="header">
+                <img src="assets/myLogo.svg" alt="Logo" class="header-logo">
             </div>
+            <ul class="nav-links">
+                <li><a href="#hero">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
     </nav>
     <script src="js/navbar.js"></script>
