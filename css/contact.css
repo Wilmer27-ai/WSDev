@@ -54,20 +54,15 @@ html {
 #contact .contact-wrapper .contact-inner .contact-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 50px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-header h1 {
   font-family: "Maven Pro", sans-serif;
   font-size: 2.5rem;
-  font-weight: 300;
+  font-weight: 200;
   color: #333;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 0.5s forwards;
@@ -76,21 +71,22 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: auto;
   padding: 20px;
+  padding-bottom: 70px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: left;
+  height: auto;
+  border-radius: 30px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
   background: #ffffff;
   font-family: "Maven Pro", sans-serif;
   opacity: 0;
+  padding: 20px;
   animation: fadeIn 1s ease-in-out 1s forwards;
 }
 @media screen and (min-width: 712px) {
@@ -103,17 +99,12 @@ html {
     padding: 40px;
   }
 }
-#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role, #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role {
   text-align: left;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role h2 {
   font-size: 1.9rem;
-  font-weight: 300;
+  font-weight: 200;
   color: #333;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -125,29 +116,45 @@ html {
   margin-top: 10px;
   color: #666;
 }
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  row-gap: 20px;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+    gap: 230px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+    gap: 230px;
+  }
+}
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li {
-  margin: 0;
+  margin: 0 10px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
   align-items: center;
   display: flex;
   text-decoration: none;
-  color: #666;
-  padding: 10px 0;
+  color: #007bff;
+  padding-top: 20px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a:hover {
+  text-decoration: underline;
   color: #0056b3;
 }
 

@@ -1,7 +1,6 @@
 @use "scss_partials/general" as *;
 
 #contact {
-    
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -20,65 +19,54 @@
             .contact-content {
                 max-width: 1200px;
                 margin: 0 auto;
-                padding: 40px;
-                background: #f9f9f9;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                margin-bottom: 50px;
-
-
                 .contact-header {
                     text-align: center;
-                    margin-bottom: 40px;
+                    margin-bottom: 60px;
                     h1 {
                         font-family: $font;
                         font-size: 2.5rem;
-                        font-weight: 300;
+                        font-weight: 200;
                         color: #333;
                         opacity: 0;
                         animation: fadeIn 1s ease-in-out 0.5s forwards;
                     }
                 }
-
                 .contact-form {
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    width: 100%;
+                    width: auto;
                     padding: 20px;
+                    padding-bottom: 70px;
 
                     .contact-card { 
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 20px;
-                        width: 100%;
-                        max-width: 800px;
-                        padding: 30px;
-                        border-radius: 10px;
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: left;
+                        align-items: left;
+                        height: auto;
+                        border-radius: 30px;
+                        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
                         background: #ffffff;
                         font-family: $font;
                         opacity: 0;
+                        padding: 20px;
                         animation: fadeIn 1s ease-in-out 1s forwards;
 
                         @include screensize($tablet) {
                             padding: 30px;
+
                         }
                         @include screensize($desktop) {
                             padding: 40px;
-                        }
 
-                        .name-role, .social-media {
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
                         }
 
                         .name-role {
                             text-align: left;
                             h2 {
                                 font-size: 1.9rem;
-                                font-weight: 300;
+                                font-weight: 200;
                                 color: #333;
                                 margin-bottom: 10px;
                                 margin-top: 10px;
@@ -91,31 +79,40 @@
                                 color: #666;
                             }
                         }
-
                         .social-media {
+                            display: flex;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 20px;
+                            row-gap: 20px;
+                            @include screensize($tablet) {
+                                gap: 230px;
+                            }
+                            @include screensize($desktop) {
+                                gap: 230px;
+                            }
+
+
                             ul {
                                 list-style: none;
                                 padding: 0;
                                 display: flex;
                                 flex-direction: column;
-                                gap: 10px;
-
                                 li {
-                                    margin: 0;
+                                    margin: 0 10px;
                                     a {
                                         align-items: center;
                                         display: flex;
                                         text-decoration: none;
-                                        color: #666;
-                                        padding: 10px 0;
+                                        color: #007bff;
+                                        padding-top: 20px;
 
                                         img {
                                             width: 30px;
                                             height: 30px;
-                                            margin-right: 10px;
+                                            margin-right: 5px;
                                         }
-
                                         &:hover {
+                                            text-decoration: underline;
                                             color: #0056b3;
                                         }
                                     }

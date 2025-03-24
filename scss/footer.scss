@@ -1,12 +1,11 @@
 @use "scss_partials/general" as *;
 
 .footer-wrapper {
-    background-color: #444;;
-    font-family: $font;
+    background-color: var(--main-color);
     color: #fff;
     padding: 20px 0;
     opacity: 0;
-    transform: translateY(0px);
+    transform: translateY(30px);
     animation: fadeInUp 1s ease-in-out forwards;
 
     .footer-inner {
