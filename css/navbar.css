@@ -76,6 +76,7 @@ html {
   width: 70px;
   height: 70px;
   opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 .nav .nav-links {
   display: flex;
@@ -100,6 +101,7 @@ html {
 .nav .nav-links li {
   opacity: 0;
   animation-fill-mode: forwards;
+  transition: opacity 0.3s ease-in-out;
 }
 .nav .nav-links li a {
   position: relative;
@@ -129,7 +131,7 @@ html {
 .nav .nav-links li a span {
   display: inline-block;
   transform: translateY(0);
-  transition: transform 2s ease;
+  transition: transform 0.2s ease;
 }
 .nav .nav-links li a:hover span {
   transform: translateY(-10%);
