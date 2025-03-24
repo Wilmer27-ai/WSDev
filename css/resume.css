@@ -112,7 +112,7 @@ html {
 #resume .wrapper .inner .content .resume-info .name-container h1 {
   display: flex;
   flex-direction: column;
-  background-color: var(--muted-color);
+  background-color: #f9f9f9;
   border-radius: 10px;
   font-family: "Maven Pro", sans-serif;
   font-size: 2rem;
@@ -129,7 +129,7 @@ html {
   margin: 0;
   font-family: "Maven Pro", sans-serif;
   font-size: 1.2rem;
-  background-color: var(--muted-color);
+  background-color: #f9f9f9;
   border-radius: 10px;
   padding: 20px;
   padding-left: 35px;
@@ -143,7 +143,7 @@ html {
   color: black;
 }
 #resume .wrapper .inner .content .resume-info .skills-container {
-  background-color: var(--muted-color);
+  background-color: #f9f9f9;
   border-radius: 10px;
   padding: 35px;
   margin-right: 20px;
@@ -176,7 +176,7 @@ html {
   margin-right: 10px;
   width: 40px;
   height: 40px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.5s ease, color 0.5s ease;
 }
 #resume .wrapper .inner .content .resume-info .skills-container ul li:hover img {
   transform: scale(1.2);

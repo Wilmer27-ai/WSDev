@@ -71,7 +71,7 @@
             h1 {
               display: flex;
               flex-direction: column;
-              background-color: var(--muted-color);
+              background-color: #f9f9f9;
               border-radius: 10px;
               font-family: $font;
               font-size: 2rem;
@@ -90,7 +90,7 @@
             margin: 0;
             font-family: $font;
             font-size: 1.2rem;
-            background-color: var(--muted-color);
+            background-color:#f9f9f9;
             border-radius: 10px;
             padding: 20px;
             padding-left: 35px;
@@ -106,7 +106,7 @@
           }
 
           .skills-container {
-            background-color: var(--muted-color);
+            background-color: #f9f9f9;
             border-radius: 10px;
             padding: 35px;
             margin-right: 20px;
@@ -140,12 +140,12 @@
                   margin-right: 10px;
                   width: 40px;
                   height: 40px;
-                  transition: transform 0.3s ease, color 0.3s ease;
-                }
+                    transition: transform 0.5s ease, color 0.5s ease;
+                  }
 
-                &:hover img {
-                  transform: scale(1.2);
-                }
+                  &:hover img {
+                    transform: scale(1.2);
+                  }
               }
             }
           }
