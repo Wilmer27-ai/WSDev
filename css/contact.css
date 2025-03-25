@@ -76,9 +76,9 @@ html {
   padding-bottom: 70px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   height: auto;
   max-width: 600px;
   border-radius: 15px;
@@ -91,59 +91,118 @@ html {
 }
 @media screen and (min-width: 712px) {
   #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card {
+    gap: 20px;
     padding: 30px;
+    display: grid;
     grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1024px) {
   #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card {
-    padding: 40px;
-    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
   }
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role {
   text-align: left;
+  display: flex;
+  flex-direction: column;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role h2 {
   font-size: 1.5rem;
   font-weight: 200;
   color: #333;
-  margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
+  margin-bottom: 5px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role p {
   font-size: 1rem;
   margin: 0;
-  margin-bottom: 10px;
-  margin-top: 10px;
   color: #666;
 }
-#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role p a {
+  text-decoration: none;
+  color: #0056b3;
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role .role {
+  margin-bottom: 15px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .name-role .divider {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1rem 0;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
   list-style: none;
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
+    flex-direction: column;
+  }
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li {
   margin: 0 10px;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
-  align-items: center;
   display: flex;
+  align-items: center;
   text-decoration: none;
   color: #666;
-  padding-top: 10px;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
+    padding-left: 40px;
+    display: flex;
+    padding-top: 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
+    padding-left: 40px;
+    display: flex;
+    padding-top: 20px;
+  }
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a span {
+  display: none;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a span {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a span {
+    display: inline-block;
+  }
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
   width: 25px;
   height: 25px;
-  margin-right: 5px;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
+    margin-right: 5px;
+  }
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a:hover {
   color: #0056b3;

@@ -1,139 +1,198 @@
 @use "scss_partials/general" as *;
 
 #contact {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+  &.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .contact-wrapper {
     opacity: 0;
     transform: translateY(30px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  
-    &.fade-in {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    
-    .contact-wrapper {
-        opacity: 0;
-        transform: translateY(30px);
-        animation: fadeInUp 1s ease-in-out forwards;
+    animation: fadeInUp 1s ease-in-out forwards;
 
-        .contact-inner {
-            .contact-content {
-                max-width: 1200px;
-                margin: 0 auto;
-                .contact-header {
-                    text-align: center;
-                    margin-bottom: 60px;
-                    h1 {
-                        font-family: $font;
-                        font-size: 2.5rem;
-                        font-weight: 200;
-                        color: #333;
-                        opacity: 0;
-                        animation: fadeIn 1s ease-in-out 0.5s forwards;
-                    }
-                }
-                .contact-form {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: auto;
-                    padding: 20px;
-                    padding-bottom: 70px;
-
-                    .contact-card { 
-                        display: grid;
-                        grid-template-columns: 1fr 1fr;
-                        gap: 20px;
-                        height: auto;
-                        max-width: 600px; // Adjust the max-width to make the card smaller
-                        border-radius: 15px; // Adjust the border-radius for a more professional look
-                        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); // Adjust the box-shadow for a softer look
-                        background: #ffffff;
-                        font-family: $font;
-                        opacity: 0;
-                        padding: 20px;
-                        animation: fadeIn 1s ease-in-out 1s forwards;
-
-                        @include screensize($tablet) {
-                            padding: 30px;
-                            grid-template-columns: 1fr 1fr;
-                        }
-                        @include screensize($desktop) {
-                            padding: 40px;
-                            grid-template-columns: 1fr 1fr;
-                        }
-
-                        .name-role {
-                            text-align: left; // Align the text to the left
-                            h2 {
-                                font-size: 1.5rem; // Adjust the font-size for a more balanced look
-                                font-weight: 200;
-                                color: #333;
-                                margin-bottom: 10px;
-                                margin-top: 10px;
-                            }
-                            p {
-                                font-size: 1rem;
-                                margin: 0;
-                                margin-bottom: 10px;
-                                margin-top: 10px;
-                                color: #666;
-                            }
-                        }
-                        .social-media {
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start; // Align the social media links to the left
-
-                            ul {
-                                list-style: none;
-                                padding: 0;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-start; // Align the list items to the left
-                                li {
-                                    margin: 0 10px;
-                                    a {
-                                        align-items: center;
-                                        display: flex;
-                                        text-decoration: none;
-                                        color: #666;
-                                        padding-top: 10px; // Adjust the padding for a more compact look
-
-                                        img {
-                                            width: 25px; // Adjust the image size for a more balanced look
-                                            height: 25px;
-                                            margin-right: 5px;
-                                        }
-                                        &:hover {
-                                            color: #0056b3;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    .contact-inner {
+      .contact-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        .contact-header {
+          text-align: center;
+          margin-bottom: 60px;
+          h1 {
+            font-family: $font;
+            font-size: 2.5rem;
+            font-weight: 200;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
+          }
         }
+        .contact-form {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: auto;
+          padding: 20px;
+          padding-bottom: 70px;
+
+          .contact-card {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            height: auto;
+            max-width: 600px; // Adjust the max-width to make the card smaller
+            border-radius: 15px; // Adjust the border-radius for a more professional look
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1); // Adjust the box-shadow for a softer look
+            background: #ffffff;
+            font-family: $font;
+            opacity: 0;
+            padding: 20px;
+            animation: fadeIn 1s ease-in-out 1s forwards;
+
+            @include screensize($tablet) {
+              gap: 20px;
+              padding: 30px;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+            }
+            @include screensize($desktop) {
+              gap: 20px;
+              padding: 30px;
+              display: grid;
+              grid-template-columns: 2fr 1fr;
+            }
+
+            .name-role {
+              text-align: left; // Align the text to the left
+              display: flex;
+              flex-direction: column;
+
+              h2 {
+                font-size: 1.5rem; // Adjust the font-size for a more balanced look
+                font-weight: 200;
+                color: #333;
+                margin-top: 20px;
+                margin-bottom: 5px;
+              }
+
+              p {
+                font-size: 1rem;
+                margin: 0;
+                color: #666;
+
+                a {
+                  text-decoration: none;
+                  color: #0056b3;
+                }
+              }
+
+              .role {
+                margin-bottom: 15px;
+                font-size: 0.8rem;
+                text-transform: uppercase;
+              }
+
+              .divider {
+                width: 100%; // Full width of the container
+                height: 1px; // Thickness of the line
+                background-color: #ccc; // Light gray color for the line
+                margin: 1rem 0; // Add spacing above and below the line
+              }
+            }
+            .social-media {
+              ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+
+                @include screensize($tablet) {
+                  flex-direction: column;
+                }
+
+                @include screensize($desktop) {
+                  flex-direction: column;
+                }
+
+                li {
+                  margin: 0 10px;
+
+                  a {
+                    display: flex; // Ensure the image and text are in a row
+                    align-items: center; // Vertically align the image and text
+                    text-decoration: none;
+                    color: #666;
+
+                    @include screensize($tablet) {
+                      padding-left: 40px;
+                      display: flex; // Keep image and text in one row
+                      padding-top: 20px;
+                    }
+
+                    @include screensize($desktop) {
+                      padding-left: 40px;
+                      display: flex; // Keep image and text in one row
+                      padding-top: 20px;
+                    }
+
+                    span {
+                      display: none; // Hide the text on mobile screens
+
+                      @include screensize($tablet) {
+                        display: inline-block; // Show the text on tablet screens
+                      }
+
+                      @include screensize($desktop) {
+                        display: inline-block; // Show the text on desktop screens
+                      }
+                    }
+
+                    img {
+                      width: 25px;
+                      height: 25px;
+                      @include screensize($tablet) {
+                        margin-right: 5px; // Add spacing between the image and text
+                      }
+                      @include screensize($desktop) {
+                        margin-right: 5px; // Add spacing between the image and text
+                      }
+                    }
+
+                    &:hover {
+                      color: #0056b3;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

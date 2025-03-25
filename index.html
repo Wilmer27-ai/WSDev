@@ -124,24 +124,31 @@
                         <div class="contact-card">
                             <div class="name-role">
                                 <h2>Wilmer Suelo</h2>
-                                <p>Front-end Developer</p>
+                                <p class="role">Front-end Developer</p>
                                 <p>Let’s collaborate! Feel free to reach out for opportunities, projects, or just to chat about web development.</p>
+                                <div class="divider"></div> <!-- Divider -->
+                                <p>
+                                    Phone: 
+                                    <a href="javascript:void(0);" id="phone-link" onclick="copyToClipboard('+1234567890')">
+                                        +639469485103
+                                    </a>
+                                    <span id="phone-copy-message" style="display: none; color: green; font-size: 0.9rem; margin-left: 10px;">Copied!</span>
+                                </p>
+                                <p>
+                                    Email: 
+                                    <a href="javascript:void(0);" id="email-link" onclick="copyToClipboard('wilmer.suelo@gmail.com')">
+                                        suelowilmer27@gmail.com
+                                    </a>
+                                    <span id="email-copy-message" style="display: none; color: green; font-size: 0.9rem; margin-left: 10px;">Copied!</span>
+                                </p>
                             </div>
                             <div class="social-media">
-                                <div class="column">
-                                    <ul>
-                                        <li><a href="Wilmer Suelo" id="facebook-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"> Facebook</a></li>
-                                        <li><a href="mailto:suelowilmer27@gmail.com"><img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Gmail Logo"> Gmail</a></li>
-                                        <li><a href="https://github.com/Wilmer27-ai" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo"> GitHub</a></li>
-                                    </ul>
-                                </div>
-                                <div class="column">
-                                    <ul>
-                                        <li><a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo"> LinkedIn</a></li>
-                                        <li><a href="https://www.instagram.com/wilmer_suelo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"> Instagram</a></li>
-                                        <li><a href="#" id="phone-link"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Phone_icon.png" alt="Phone Logo"> +639469485103</a></li>
-                                    </ul>
-                                </div>
+                                <ul>
+                                    <li><a href="Wilmer Suelo" id="facebook-link"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"><span>Facebook</span> </a></li>
+                                    <li><a href="https://github.com/Wilmer27-ai" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo"><span>GitHub</span> </a></li>
+                                    <li><a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo"><span>LinkedIn</span> </a></li>
+                                    <li><a href="https://www.instagram.com/wilmer_suelo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"><span>Instagram</span> </a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -165,5 +172,6 @@
     <script src="js/hero.js"></script>
     <script src="js/navbar.js"></script>
     <script src="js/scrollEffects.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
