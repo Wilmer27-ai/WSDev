@@ -31,4 +31,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }, { threshold: 0.1 });
 
     heroObserver.observe(heroSection);
+
+    // Scroll to the hero section on page load
+    window.scrollTo({
+        top: heroSection.offsetTop,
+        behavior: 'smooth'
+    });
 });
