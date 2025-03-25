@@ -40,11 +40,12 @@ html {
 .nav {
   position: fixed;
   width: 100%;
-  top: -100px;
+  top: 0;
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgb(255, 255, 255));
+  backdrop-filter: blur(10px);
 }
 .nav.nav-animate {
   top: 0;
@@ -75,7 +76,7 @@ html {
 .nav .header .header-logo {
   width: 70px;
   height: 70px;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
 }
 .nav .nav-links {
@@ -99,7 +100,7 @@ html {
   }
 }
 .nav .nav-links li {
-  opacity: 0;
+  opacity: 1;
   animation-fill-mode: forwards;
   transition: opacity 0.3s ease-in-out;
 }

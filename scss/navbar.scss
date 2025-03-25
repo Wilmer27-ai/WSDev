@@ -3,11 +3,12 @@
 .nav {
   position: fixed;
   width: 100%;
-  top: -100px; // Initially hidden
+  top: 0; // Ensure it starts at the top
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
-  background: rgba(255, 255, 255, 0.9);
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)); // Gradual transparency effect
+  backdrop-filter: blur(10px); // Adds a subtle blur effect for a polished look
 
   &.nav-animate {
     top: 0; // Slides down smoothly
@@ -37,7 +38,7 @@
     .header-logo {
       width: 70px;
       height: 70px;
-      opacity: 0; // Initially hidden
+      opacity: 1; // Ensure the logo is visible
       transition: opacity 0.3s ease-in-out;
     }
   }
@@ -61,7 +62,7 @@
     }
 
     li {
-      opacity: 0; // Initially hidden
+      opacity: 1; // Ensure links are visible
       animation-fill-mode: forwards;
       transition: opacity 0.3s ease-in-out;
 
