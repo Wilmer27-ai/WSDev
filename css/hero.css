@@ -109,10 +109,20 @@ html {
   animation: fadeIn 1s ease-in-out 0.5s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
-  font-size: 2.7rem;
+  font-size: 1.5rem;
   margin-bottom: 15px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1s forwards;
+}
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
+    font-size: 2.7rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
+    font-size: 2.7rem;
+  }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-subtitle {
   font-size: 1rem;
