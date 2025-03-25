@@ -70,16 +70,11 @@
           }
 
           .intro-title {
-            font-size: 2rem;
+            font-size: 2.7rem;
             margin-bottom: 15px;
             opacity: 0;
             animation: fadeIn 1s ease-in-out 1s forwards;
-            @include screensize($tablet) {
-              font-size: 2.7rem;
-            }
-            @include screensize($desktop) {
-              font-size: 2.7rem;
-            }
+
           }
 
           .intro-subtitle {
