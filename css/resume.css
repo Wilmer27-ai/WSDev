@@ -174,8 +174,8 @@ html {
 }
 #resume .wrapper .inner .content .resume-info .skills-container ul li img {
   margin-right: 10px;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   transition: transform 0.5s ease, color 0.5s ease;
 }
 #resume .wrapper .inner .content .resume-info .skills-container ul li:hover img {

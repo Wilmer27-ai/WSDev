@@ -38,7 +38,9 @@ html {
 }
 
 .footer-wrapper {
-  background-color: var(--main-color);
+  font-family: "Maven Pro", sans-serif;
+  line-height: 1rem;
+  background-color: #333;
   color: #fff;
   padding: 20px 0;
   opacity: 0;
