@@ -1,13 +1,14 @@
 @use "scss_partials/general" as *;
 
 .nav {
+  height: 100px; // Adjust this value based on your navbar height
   position: fixed;
   width: 100%;
   top: 0; // Ensure it starts at the top
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 1)); // Gradual transparency effect
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1)); // Gradual transparency effect
   backdrop-filter: blur(10px); // Adds a subtle blur effect for a polished look
 
   &.nav-animate {

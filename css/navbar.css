@@ -38,13 +38,14 @@ html {
 }
 
 .nav {
+  height: 100px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
-  background: linear-gradient(to top, rgba(255, 255, 255, 0.3), rgb(255, 255, 255));
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgb(255, 255, 255));
   backdrop-filter: blur(10px);
 }
 .nav.nav-animate {
