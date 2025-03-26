@@ -6,7 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --muted-color: #eee;
+  --muted-color: #ffffff;
   --main-color: #5271ff;
   --black-color: #000;
   --button-color: #5b5b5b;
@@ -35,7 +35,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  background-color: #F6F5F2;
+  background-color: #ECF2FF;
 }
 
 #resume {
@@ -44,7 +44,6 @@ html {
   transform: translateY(30px);
   animation: fadeInUp 1s ease-in-out forwards;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-  background-color: #F6F5F2;
 }
 #resume.fade-in {
   opacity: 1;

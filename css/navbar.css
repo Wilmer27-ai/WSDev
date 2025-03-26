@@ -6,7 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --muted-color: #eee;
+  --muted-color: #ffffff;
   --main-color: #5271ff;
   --black-color: #000;
   --button-color: #5b5b5b;
@@ -35,7 +35,7 @@ body {
 
 html {
   scroll-behavior: smooth;
-  background-color: #F6F5F2;
+  background-color: #ECF2FF;
 }
 
 .nav {
@@ -46,7 +46,7 @@ html {
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
-  background: linear-gradient(to top, rgba(246, 245, 242, 0.6), rgb(246, 245, 242));
+  background: linear-gradient(to top, rgba(236, 242, 255, 0.6), rgb(236, 242, 255));
   backdrop-filter: blur(10px);
   opacity: 0;
   visibility: hidden;
