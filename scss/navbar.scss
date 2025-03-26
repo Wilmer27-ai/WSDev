@@ -4,15 +4,19 @@
   height: 100px; // Adjust this value based on your navbar height
   position: fixed;
   width: 100%;
-  top: 0; // Ensure it starts at the top
+  top: -100px; // Initially hide the navbar above the viewport
   left: 0;
   z-index: 1000;
   transition: top 0.3s ease-in-out;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 1)); // Gradual transparency effect
   backdrop-filter: blur(10px); // Adds a subtle blur effect for a polished look
+  opacity: 0; // Initially hide the navbar
+  visibility: hidden; // Prevent it from being interactable
 
   &.nav-animate {
     top: 0; // Slides down smoothly
+    opacity: 1; // Make it visible
+    visibility: visible; // Allow interactions
   }
 
   &.nav-hide {
@@ -39,7 +43,7 @@
     .header-logo {
       width: 70px;
       height: 70px;
-      opacity: 1; // Ensure the logo is visible
+      opacity: 0; // Initially hide the logo
       transition: opacity 0.3s ease-in-out;
     }
   }
@@ -63,7 +67,7 @@
     }
 
     li {
-      opacity: 1; // Ensure links are visible
+      opacity: 0; // Initially hide the links
       animation-fill-mode: forwards;
       transition: opacity 0.3s ease-in-out;
 
