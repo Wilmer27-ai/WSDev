@@ -137,13 +137,23 @@ html {
   animation: fadeIn 1s ease-in-out 2s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-  padding: 15px 40px;
+  padding: 10px 15px;
   border: none;
   cursor: pointer;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.5s ease;
+}
+@media screen and (min-width: 712px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+    padding: 12px 35px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+    padding: 15px 40px;
+  }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume {
   color: var(--button-color);

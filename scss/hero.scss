@@ -96,13 +96,21 @@
             animation: fadeIn 1s ease-in-out 2s forwards;
 
             .d-resume, .contact {
-              padding: 15px 40px;
+              padding: 10px 15px;
               border: none;
               cursor: pointer;
               border-radius: 50px;
               font-size: 1rem;
               font-weight: 600;
               transition: all 0.5s ease;
+
+
+              @include screensize($tablet) {
+                padding: 12px 35px;
+              }
+              @include screensize($desktop) {
+                padding: 15px 40px;
+              }
             }
             
             .d-resume {
