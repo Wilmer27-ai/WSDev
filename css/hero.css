@@ -6,7 +6,7 @@
   --accent-color: #e74c3c;
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
-  --muted-color: #ffffff;
+  --muted-color: #eee;
   --main-color: #5271ff;
   --black-color: #000;
   --button-color: #5b5b5b;
@@ -35,7 +35,6 @@ body {
 
 html {
   scroll-behavior: smooth;
-  background-color: #ECF2FF;
 }
 
 #hero {
@@ -138,23 +137,13 @@ html {
   animation: fadeIn 1s ease-in-out 2s forwards;
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-  padding: 10px 15px;
+  padding: 15px 40px;
   border: none;
   cursor: pointer;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.5s ease;
-}
-@media screen and (min-width: 712px) {
-  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-    padding: 12px 35px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-    padding: 15px 20px;
-  }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume {
   color: var(--button-color);
