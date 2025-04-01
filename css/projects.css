@@ -162,7 +162,7 @@ html {
   }
 }
 #projects .wrapper .inner .content .projects-container .projects-slide .image-container .details-overlay a {
-  color: var(--main-color);
+  color: white;
   text-decoration: none;
   font-weight: bold;
   margin-bottom: 20px;
@@ -175,7 +175,7 @@ html {
 }
 #projects .wrapper .inner .content .projects-container .projects-slide .image-container .details-overlay .tech-stack {
   display: flex;
-  gap: 5px;
+  gap: 2px;
   font-family: "Maven Pro", sans-serif;
 }
 @media screen and (min-width: tablet) {
