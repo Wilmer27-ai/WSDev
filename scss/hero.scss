@@ -22,7 +22,7 @@
         opacity: 0;
         transform: translateY(30px);
         animation: fadeInUp 1s ease-in-out forwards;
-        margin-bottom: 20px;
+
         margin-top: 20px;
 
         @include screensize($tablet) {
@@ -46,7 +46,7 @@
           grid-area: intro;
           font-family: $font;
           padding: 20px;
-          padding-top: 150px;
+          padding-top: 120px;
           padding-bottom: 100px;
 
           @include screensize($tablet) {
@@ -96,13 +96,20 @@
             animation: fadeIn 1s ease-in-out 2s forwards;
 
             .d-resume, .contact {
-              padding: 15px 40px;
+              padding: 12px 20px;
               border: none;
               cursor: pointer;
               border-radius: 50px;
               font-size: 1rem;
               font-weight: 600;
               transition: all 0.5s ease;
+
+              @include screensize($tablet) {
+                padding: 13px 35px;
+              }
+              @include screensize($desktop) {
+                padding: 13px 35px;
+              }
             }
             
             .d-resume {
@@ -141,8 +148,8 @@
           }
             .hero-logo {
             border-radius: 90%;
-            width: 300px;
-            height: 300px;
+            width: 260px;
+            height: 260px;
             margin: 0 auto;
             
 
