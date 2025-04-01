@@ -189,10 +189,22 @@
 
                     .prev {
                         left: -30px;
+                        @include screensize($tablet) {
+                            left: -50px;
+                        }
+                        @include screensize($desktop) {
+                            left: -50px;
+                        }
                     }
 
                     .next {
                         right: -30px;
+                        @include screensize($tablet) {
+                            right: -50px;
+                        }
+                        @include screensize($desktop) {
+                            right: -50px;
+                        }
                     }
                 }
             }

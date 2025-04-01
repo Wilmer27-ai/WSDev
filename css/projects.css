@@ -223,8 +223,28 @@ html {
 #projects .wrapper .inner .content .projects-container .prev {
   left: -30px;
 }
+@media screen and (min-width: 712px) {
+  #projects .wrapper .inner .content .projects-container .prev {
+    left: -50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #projects .wrapper .inner .content .projects-container .prev {
+    left: -50px;
+  }
+}
 #projects .wrapper .inner .content .projects-container .next {
   right: -30px;
+}
+@media screen and (min-width: 712px) {
+  #projects .wrapper .inner .content .projects-container .next {
+    right: -50px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #projects .wrapper .inner .content .projects-container .next {
+    right: -50px;
+  }
 }
 
 @keyframes fadeInUp {
