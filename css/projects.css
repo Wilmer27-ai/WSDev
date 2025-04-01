@@ -175,7 +175,6 @@ html {
 }
 #projects .wrapper .inner .content .projects-container .projects-slide .image-container .details-overlay .tech-stack {
   display: flex;
-  flex-wrap: wrap;
   gap: 5px;
   font-family: "Maven Pro", sans-serif;
 }
