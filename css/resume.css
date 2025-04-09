@@ -38,15 +38,18 @@ html {
 }
 
 #resume {
-  height: auto;
+  margin-bottom: 100px;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s ease-in-out forwards;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 #resume.fade-in {
   opacity: 1;
   transform: translateY(0);
+}
+#resume.fade-out {
+  opacity: 0;
+  transform: translateY(30px);
 }
 #resume .wrapper .inner {
   max-width: 1200px;
@@ -70,8 +73,6 @@ html {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out 1s forwards;
 }
 @media screen and (min-width: 712px) {
   #resume .wrapper .inner .content {
@@ -90,13 +91,6 @@ html {
   #resume .wrapper .inner .content .image {
     display: block;
   }
-}
-@media screen and (min-width: 712px) and (min-width: 1024px) {
-  #resume .wrapper .inner .content .image {
-    display: block;
-  }
-}
-@media screen and (min-width: 712px) {
   #resume .wrapper .inner .content .image img {
     border-radius: 60%;
     opacity: 0;
@@ -107,8 +101,6 @@ html {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  opacity: 0;
-  animation: fadeIn 1s ease-in-out 2s forwards;
 }
 #resume .wrapper .inner .content .resume-info .name-container h1 {
   display: flex;
@@ -181,23 +173,4 @@ html {
 }
 #resume .wrapper .inner .content .resume-info .skills-container ul li:hover img {
   transform: scale(1.2);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }

@@ -11,7 +11,7 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg", // Bootstrap logo
             "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" // Firebase logo
         ],
-        link: "https://example.com/project1"
+        link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html"
     },
     {
         title: "Callbox Ebooks page",
@@ -24,7 +24,7 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
         ],
-        link: "https://example.com/project2"
+        link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
     },
     {
         title: "Callbox Industries We Serve page",
@@ -36,7 +36,7 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
         ],
-        link: "https://example.com/project2"
+        link: "https://staging.callboxinc.com/wilmer-v2/#"
     },
     
     // Add more projects as needed

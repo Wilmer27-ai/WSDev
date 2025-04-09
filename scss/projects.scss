@@ -1,86 +1,120 @@
 @use "scss_partials/general" as *;
+
 #projects {
+    margin: 100px 0 100px 0;
+    opacity: 0; // Initially hidden
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.fade-out {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
     .wrapper {
         .inner {
             max-width: 1200px;
             margin: 0 auto;
+
             .content {
                 .projects-header {
                     text-align: center;
-                    margin-bottom: 60px;
-                    margin-top: 50px;
+                    margin: 10px;
+
                     h1 {
-                      font-family: $font;
-                      font-size: 2.5rem;
-                      font-weight: 200;
-                      color: #333;
-                      opacity: 0;
-                      animation: fadeIn 1s ease-in-out 0.5s forwards;
+                        font-family: $font;
+                        font-size: 2.5rem;
+                        font-weight: 200;
+                        color: #333;
+                        opacity: 0;
+                        animation: fadeIn 1s ease-in-out 0.5s forwards;
                     }
-                  }
+                }
 
                 .projects-list {
                     display: grid;
-                    grid-template-columns: 1fr;
-                    gap: 30px;
-                    margin: 60px 30px 30px 30px;
+                    grid-template-columns: 1fr; // Default to one column
+                    gap: 20px;
+                    row-gap: 40px;
+                    margin: 100px 30px 30px 30px;
+
                     @include screensize($tablet) {
-                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-columns: 1fr 1fr; // Use auto to fit content
                     }
 
                     @include screensize($desktop) {
-                        grid-template-columns: repeat(2, 1fr);
+                        grid-template-columns: 1fr 1fr; // Use auto to fit content
                     }
-                
+
                     .project-card {
+                        display: inline-block;
+                        width: auto;
                         background-color: #f9f9f9;
                         border-radius: 8px;
                         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                        overflow: hidden;
-                        transition: transform 0.3s ease, box-shadow 0.3s ease;
-                        transform: translateY(-10px) scale(1.02);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.5s ease;
+                        opacity: 0; // Initially hidden
+                        transform: translateY(30px);
+
+                        &.fade-in {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+
+                        &.fade-out {
+                            opacity: 0;
+                            transform: translateY(30px);
+                        }
+
                         &:hover {
-                            
                             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
                         }
-                
+
                         .project-image-container {
                             width: auto;
                             height: auto;
                             overflow: hidden;
-                
+                            border-radius: inherit;
+
                             .project-image {
                                 width: 100%;
-                                height: auto;
+                                height: 300px;
                                 object-fit: cover;
+                                border-radius: inherit;
                             }
                         }
-                
+
                         .project-details {
-                            padding: 20px;
+                            padding: 30px;
                             font-family: $font;
-                
+                            max-width: 480px;
+
                             .project-title {
                                 font-size: 1.5rem;
                                 font-weight: 600;
                                 margin-bottom: 10px;
                                 color: #333;
                             }
-                
+
                             .project-description {
                                 font-size: 1rem;
                                 color: #666;
-                                margin-bottom: 15px;
+                                margin: 20px 0 20px 0;
                             }
-                
+
                             .tech-stack {
                                 display: flex;
-                                gap: 10px;
+                                gap: 15px;
                                 flex-wrap: wrap;
-                
+
                                 .tech-logo {
-                                    width: 35px;
-                                    height: 35px;
+                                    width: 38px;
+                                    height: 38px;
                                     transition: transform 0.3s ease;
 
                                     &:hover {
@@ -88,19 +122,19 @@
                                     }
                                 }
                             }
-                
+
                             .view-project-btn {
                                 display: inline-block;
-                                margin-top: 15px;
+                                margin-top: 20px;
                                 padding: 10px 20px;
-                                background-color: var(--main-color);
+                                background-color: var(--button-color);
                                 color: #fff;
                                 text-decoration: none;
-                                border-radius: 5px;
+                                border-radius: 50px;
                                 transition: background-color 0.3s ease;
-                
+
                                 &:hover {
-                                    background-color: #0056b3;
+                                    background-color: var(--main-color);
                                 }
                             }
                         }
