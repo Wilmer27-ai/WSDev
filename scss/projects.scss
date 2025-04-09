@@ -1,223 +1,112 @@
 @use "scss_partials/general" as *;
-
 #projects {
-    height: auto;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-
-
-    &.fade-in {
-        opacity: 1;
-        transform: translateY(0);
-    }
     .wrapper {
-        max-width: 1200px;
-        margin: 0 auto;
-
         .inner {
+            max-width: 1200px;
+            margin: 0 auto;
             .content {
-                padding-top: 150px;
-                padding-bottom: 100px;
-                padding-left: 30px;
-                padding-right: 30px;
-
                 .projects-header {
                     text-align: center;
-                    margin-bottom: 70px;
-
-                    @include screensize($tablet) {
-                        padding-left: 150px;
-                        padding-right: 150px;
-                    }
-                    @include screensize($desktop) {
-                        padding-left: 10px;
-                        padding-right: 10px;
-
-                    }
-                    
+                    margin-bottom: 60px;
+                    margin-top: 50px;
                     h1 {
-                        font-family: $font;
-                        font-size: 2.5rem;
-                        font-weight: 200;
-                        color: #333;
+                      font-family: $font;
+                      font-size: 2.5rem;
+                      font-weight: 200;
+                      color: #333;
+                      opacity: 0;
+                      animation: fadeIn 1s ease-in-out 0.5s forwards;
                     }
-                }
+                  }
 
-                .projects-container {
-                    position: relative;
-                    width: 100%;
-                    overflow: visible;
-                    border-radius: 10px;
-                    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-                    background: #fff;
+                .projects-list {
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                    margin: 60px 30px 30px 30px;
+                    @include screensize($tablet) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
 
-                    .projects-slide {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        width: 100%;
-                        position: relative;
-
-                        .image-container {
-                            position: relative;
-                            width: 100%;
-                            height: 80px;
-                            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-                            border-radius: 8px;
-                            overflow: hidden;
+                    @include screensize($desktop) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                
+                    .project-card {
+                        background-color: #f9f9f9;
+                        border-radius: 8px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        transform: translateY(-10px) scale(1.02);
+                        &:hover {
                             
-
-                            @include screensize($tablet) {
-                                 height: 100%;;
-
-
-                            }
-                            @include screensize($desktop) {
-                                height: 100%;
-                            }
-
-                            img {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                        }
+                
+                        .project-image-container {
+                            width: auto;
+                            height: auto;
+                            overflow: hidden;
+                
+                            .project-image {
                                 width: 100%;
-                                height: 100%;
+                                height: auto;
                                 object-fit: cover;
-                                border-radius: 8px;
-                                transition: opacity 0.5s ease-in-out;
                             }
-
-                            .details-overlay {
-                                position: absolute;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                background: rgba(0, 0, 0, 0.7);
-                                color: #fff;
+                        }
+                
+                        .project-details {
+                            padding: 20px;
+                            font-family: $font;
+                
+                            .project-title {
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin-bottom: 10px;
+                                color: #333;
+                            }
+                
+                            .project-description {
+                                font-size: 1rem;
+                                color: #666;
+                                margin-bottom: 15px;
+                            }
+                
+                            .tech-stack {
                                 display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                opacity: 0;
-                                transition: opacity 0.5s ease-in-out;
-                                border-radius: 8px;
-                                text-align: center;
-
-
-                                p {
-                                    font-size: 12px;
-                                    margin-bottom: 20px;
-                                    font-family: $font;
-                                    padding-left: 10px;
-                                    padding-right: 10px;
-                                    margin: 20px;
-                                    @include screensize(tablet) {
-                                        padding-left: 150px;
-                                        padding-right: 150px;
-                                        font-size: 1rem;
-                                    }
-                                    @include screensize($desktop) {
-                                        padding-left: 150px;
-                                        padding-right: 150px;
-                                        font-size: 1rem;
-                                    }
-                                }
-
-                                a {
-                                    color: white;
-                                    text-decoration: none;
-                                    font-weight: bold;
-                                    margin-bottom: 20px;
-                                    transition: color 0.3s ease;
-                                    font-family: $font;
-                                    font-size: 1.2rem;
+                                gap: 10px;
+                                flex-wrap: wrap;
+                
+                                .tech-logo {
+                                    width: 35px;
+                                    height: 35px;
+                                    transition: transform 0.3s ease;
 
                                     &:hover {
-                                        color: #fff;
-                                    }
-                                }
-
-                                .tech-stack {
-                                    display: flex;                              
-                                    gap: 2px;
-                                    font-family: $font;
-
-                                    @include screensize(tablet) {
-                                        gap: 10px;
-                                    }
-                                    @include screensize($desktop) {
-                                        gap: 10px;
-                                    }
-
-                                    span {
-                                        
-                                        background: var(--main-color);
-                                        padding: 5px 10px;
-                                        border-radius: 5px;
-                                        font-size: 12px;
-                                        @include screensize(tablet) {
-                                            font-size: 1rem;;
-                                        }
-                                        @include screensize($desktop) {
-                                            font-size: 1rem;;
-                                        }
+                                        transform: scale(1.2);
                                     }
                                 }
                             }
-
-                            &:hover .details-overlay {
-                                opacity: 1;
+                
+                            .view-project-btn {
+                                display: inline-block;
+                                margin-top: 15px;
+                                padding: 10px 20px;
+                                background-color: var(--main-color);
+                                color: #fff;
+                                text-decoration: none;
+                                border-radius: 5px;
+                                transition: background-color 0.3s ease;
+                
+                                &:hover {
+                                    background-color: #0056b3;
+                                }
                             }
-                        }
-                    }
-
-                    .prev, .next {
-                        position: absolute;
-                        top: 50%;
-                        color: rgb(1, 1, 1);
-                        border: none;
-                        padding: 0;
-                        cursor: pointer;
-                        font-size: 50px;
-                        background: none;
-                        transform: translateY(-50%);
-                        z-index: 10;
-                    }
-
-                    .prev {
-                        left: -30px;
-                        @include screensize($tablet) {
-                            left: -50px;
-                        }
-                        @include screensize($desktop) {
-                            left: -50px;
-                        }
-                    }
-
-                    .next {
-                        right: -30px;
-                        @include screensize($tablet) {
-                            right: -50px;
-                        }
-                        @include screensize($desktop) {
-                            right: -50px;
                         }
                     }
                 }
             }
         }
-    }
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
     }
 }

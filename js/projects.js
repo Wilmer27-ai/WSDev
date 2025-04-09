@@ -1,68 +1,74 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const projects = [
-        {
-            image: "assets/callbox-ebook-page.webp",
-            details: "The revamped Callbox Ebooks page features a modern design built with SASS, PHP, and HTML, ensuring improved aesthetics, user experience, and efficient content management.",
-            techStack: ["HTML", "SASS", "PHP"],
-            link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
-        },
-        {
-            image: "assets/industries-we-serve.webp",
-            details: "The Industries We Serve page was redesigned using HTML, CSS, and PHP to enhance its structure, visual appeal, and functionality.",
-            techStack: ["HTML", "PHP", "CSS"],
-            link: "https://staging.callboxinc.com/wilmer-v2/#"
-        },
-        {
-            image: "assets/trashTrade.webp",
-            details: "The TrashTrade Admin Panel utilizes JavaScript, Bootstrap, and Firebase API to provide a responsive interface with real-time user, transaction, and reward management.",
-        techStack: ["HTML", "JAVA SCRIPT", "BOOTSTRAP", "FIREBASE"],
-            link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html"
-        }
+// Array of project data
+const projects = [
+    {
+        title: "Trash Trade",
+        description: "The TrashTrade Admin Panel utilizes JavaScript, Bootstrap, and Firebase API to provide a responsive interface with real-time user, transaction, and reward management.",
+        image: "assets/trashTrade.webp",
+        techStack: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", 
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", 
+            "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png",
+            "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg", // Bootstrap logo
+            "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" // Firebase logo
+        ],
+        link: "https://example.com/project1"
+    },
+    {
+        title: "Callbox Ebooks page",
+        description: "The revamped Callbox Ebooks page features a modern design built with SASS, PHP, and HTML, ensuring improved aesthetics, user experience, and efficient content management.",
+        image: "assets/callbox-ebook-page.webp",
+        techStack: [
+            "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg", // Sass logo
+            "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", // HTML logo
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", // CSS logo
+            "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
+            "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
+        ],
+        link: "https://example.com/project2"
+    },
+    {
+        title: "Callbox Industries We Serve page",
+        description: "The Industries We Serve page was redesigned using HTML, CSS, and PHP to enhance its structure, visual appeal, and functionality.",
+        image: "assets/industries-we-serve.webp",
+        techStack: [
+            "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", // HTML logo
+            "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", // CSS logo
+            "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
+            "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
+        ],
+        link: "https://example.com/project2"
+    },
+    
+    // Add more projects as needed
+];
 
-    ];
+// Function to render projects
+function renderProjects() {
+    const projectsList = document.querySelector(".projects-list");
 
-    let currentIndex = 0;
-    const imageElement = document.getElementById("projects-image");
-    const detailsElement = document.getElementById("projects-details");
+    projects.forEach((project) => {
+        const projectCard = document.createElement("div");
+        projectCard.classList.add("project-card", "animate__animated", "animate__fadeInUp");
 
-    function updateImage() {
-        imageElement.style.opacity = 0;
-        setTimeout(() => {
-            imageElement.src = projects[currentIndex].image;
-            detailsElement.innerHTML = `
-                <p>${projects[currentIndex].details}</p>
-                <a href="${projects[currentIndex].link}" target="_blank">View Project</a>
+        projectCard.innerHTML = `
+            <div class="project-image-container">
+                <img src="${project.image}" alt="${project.title}" class="project-image">
+            </div>
+            <div class="project-details">
+                <h2 class="project-title">${project.title}</h2>
+                <p class="project-description">${project.description}</p>
                 <div class="tech-stack">
-                    ${projects[currentIndex].techStack.map(tech => `<span>${tech}</span>`).join('')}
+                    ${project.techStack
+                        .map((tech) => `<img src="${tech}" alt="Tech Logo" class="tech-logo">`)
+                        .join("")}
                 </div>
-            `;
-            imageElement.style.opacity = 1;
-        }, 300);
-    }
+                <a href="${project.link}" target="_blank" class="view-project-btn">View Project</a>
+            </div>
+        `;
 
-    window.nextSlide = function () {
-        currentIndex = (currentIndex + 1) % projects.length;
-        updateImage();
-    };
+        projectsList.appendChild(projectCard);
+    });
+}
 
-    window.prevSlide = function () {
-        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-        updateImage();
-    };
-
-    // Initialize with the first image
-    updateImage();
-
-    // Add fade-in effect to projects section when it comes into view
-    const projectsSection = document.getElementById("projects");
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                projectsSection.classList.add("fade-in");
-                observer.unobserve(projectsSection); // Stop observing after the animation starts
-            }
-        });
-    }, { threshold: 0.1 });
-
-    observer.observe(projectsSection);
-});
+// Call the function to render projects
+renderProjects();
