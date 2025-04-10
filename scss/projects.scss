@@ -93,8 +93,15 @@
             }
 
             .project-details {
-              padding: 30px;
+              padding: 20px;
               font-family: $font;
+
+              @include screensize($tablet) {
+                padding: 25px;
+              }
+              @include screensize($desktop) {
+                padding: 25px;
+              }
 
 
               .project-title {

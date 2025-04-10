@@ -26,7 +26,7 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
         ],
         link: "https://staging.callboxinc.com/wilmer-ebook-template/#",
-        github: "https://github.com/wilmer27-ai/callbox-ebook-page"
+        github: "https://github.com/Wilmer27-ai/callbox-ebook-page"
     },
     {
         title: "Callbox Industries We Serve page",
