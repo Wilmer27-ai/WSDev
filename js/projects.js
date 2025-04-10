@@ -12,7 +12,7 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" // Firebase logo
         ],
         link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html",
-        github: "https://github.com/wilmer27-ai/trashtradeAdmin"
+        github: "Not-available-to-public"
     },
     {
         title: "Callbox Ebooks page",
@@ -36,12 +36,11 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg", // HTML logo
             "https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg", // CSS logo
             "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
-            "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
-        ],
-        link: "https://staging.callboxinc.com/wilmer-v2/#",
-        github: "https://github.com/wilmer27-ai/industries-we-serve"
-    },
-    
+             // WordPress logo
+                ],
+                link: "https://staging.callboxinc.com/wilmer-v2/#",
+                github: "Not-available-to-public"
+                },
     // Add more projects as needed
 ];
 

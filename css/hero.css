@@ -124,6 +124,7 @@ html {
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-subtitle {
+  line-height: 1.3rem;
   font-size: 1rem;
   margin-bottom: 20px;
   opacity: 0;
