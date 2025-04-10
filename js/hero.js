@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const nameElement = document.getElementById("name");
-    const texts = ["Wilmer Suelo", "Web Developer"];
+    const texts = ["Wilmer Suelo", "a Web Developer."];
     let currentIndex = 0;
 
     function changeText() {

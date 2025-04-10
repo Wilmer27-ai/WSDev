@@ -11,7 +11,8 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg", // Bootstrap logo
             "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" // Firebase logo
         ],
-        link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html"
+        link: "https://wilmer27-ai.github.io/trashtradeAdmin/log-sign/index.html",
+        github: "https://github.com/wilmer27-ai/trashtradeAdmin"
     },
     {
         title: "Callbox Ebooks page",
@@ -24,7 +25,8 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
         ],
-        link: "https://staging.callboxinc.com/wilmer-ebook-template/#"
+        link: "https://staging.callboxinc.com/wilmer-ebook-template/#",
+        github: "https://github.com/wilmer27-ai/callbox-ebook-page"
     },
     {
         title: "Callbox Industries We Serve page",
@@ -36,7 +38,8 @@ const projects = [
             "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg", // PHP logo
             "https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" // WordPress logo
         ],
-        link: "https://staging.callboxinc.com/wilmer-v2/#"
+        link: "https://staging.callboxinc.com/wilmer-v2/#",
+        github: "https://github.com/wilmer27-ai/industries-we-serve"
     },
     
     // Add more projects as needed
@@ -52,17 +55,18 @@ function renderProjects() {
 
         projectCard.innerHTML = `
             <div class="project-image-container">
-                <img src="${project.image}" alt="${project.title}" class="project-image">
+            <img src="${project.image}" alt="${project.title}" class="project-image">
             </div>
             <div class="project-details">
-                <h2 class="project-title">${project.title}</h2>
-                <p class="project-description">${project.description}</p>
-                <div class="tech-stack">
-                    ${project.techStack
-                        .map((tech) => `<img src="${tech}" alt="Tech Logo" class="tech-logo">`)
-                        .join("")}
-                </div>
-                <a href="${project.link}" target="_blank" class="view-project-btn">View Project</a>
+            <h2 class="project-title">${project.title}</h2>
+            <p class="project-description">${project.description}</p>
+            <div class="tech-stack">
+            ${project.techStack
+            .map((tech) => `<img src="${tech}" alt="Tech Logo" class="tech-logo">`)
+            .join("")}
+            </div>
+            <a href="${project.link}" target="_blank" class="view-project-btn">Preview</a>
+            <a href="${project.github}" target="_blank" class="secondary-action-btn">Github</a>
             </div>
         `;
 
