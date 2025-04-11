@@ -1,7 +1,7 @@
 @use "scss_partials/general" as *;
 
 .nav {
-  height: 100px; // Adjust this value based on your navbar height
+  height: 80px; // Adjust this value based on your navbar height
   position: fixed;
   width: 100%;
   top: -100px; // Initially hide the navbar above the viewport
@@ -12,6 +12,7 @@
   backdrop-filter: blur(10px); // Adds a subtle blur effect for a polished look
   opacity: 0; // Initially hide the navbar
   visibility: hidden; // Prevent it from being interactable
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
 
   &.nav-animate {
     top: 0; // Slides down smoothly
@@ -39,12 +40,17 @@
   .header {
     display: flex;
     align-items: center;
+    font-family: $font;
+    font-size: 1.2rem;
 
-    .header-logo {
-      width: 70px;
-      height: 70px;
-      opacity: 0; // Initially hide the logo
-      transition: opacity 0.3s ease-in-out;
+
+    .logo-text{
+      color: var(--main-color);
+
+      .logo-text-dot{
+        color: var(--black-color);
+      }
+
     }
   }
 

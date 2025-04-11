@@ -4,13 +4,15 @@
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  margin-bottom: 200px;
 
   &.fade-in {
     opacity: 1;
     transform: translateY(0);
   }
+
   .hero-wrapper {
-    max-width: 1200px;
+    max-width: 1330px;
     margin: 0 auto;
 
     .hero-inner {
@@ -26,20 +28,14 @@
         margin-top: 20px;
 
         @include screensize($tablet) {
-          padding-left: 40px;
           display: grid;
           grid-template-columns: 1fr 1fr;
-          margin-top: 90px;
-          margin-bottom: 280px;
         }
 
         @include screensize($desktop) {
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-template-areas: "intro myImage";
-          padding-left: 90px;
-          margin-top: 90px;
-          margin-bottom: 280px;
         }
 
         .intro {
@@ -59,33 +55,33 @@
 
           @include screensize($desktop) {
             padding: 0;
-            padding-top: 270px;
+            padding-top: 200px;
           }
 
           .intro-text {
+            margin: 0;
             font-size: 1.3rem;
-            margin-bottom: 15px;
             opacity: 0;
             animation: fadeIn 1s ease-in-out 0.5s forwards;
+            color: var(--main-color);
           }
 
           .intro-title {
             font-size: 1.7rem;
-            margin-bottom: 15px;
             opacity: 0;
             animation: fadeIn 1s ease-in-out 1s forwards;
             @include screensize($tablet) {
-              font-size: 2.7rem;
+              font-size: 4rem;
             }
             @include screensize($desktop) {
-              font-size: 2.7rem;
+              font-size: 65px;
             }
           }
 
           .intro-subtitle {
             line-height: 1.3rem;
             font-size: 1rem;
-            margin-bottom: 20px;
+            max-width: 600px;
             opacity: 0;
             animation: fadeIn 1s ease-in-out 1.5s forwards;
           }
@@ -96,43 +92,71 @@
             opacity: 0;
             animation: fadeIn 1s ease-in-out 2s forwards;
 
-            .d-resume, .contact {
+            .g-intouch, .v-work {
               padding: 12px 20px;
               border: none;
               cursor: pointer;
-              border-radius: 50px;
+              border-radius: 10px;
               font-size: 1rem;
               font-weight: 600;
               transition: all 0.5s ease;
 
               @include screensize($tablet) {
-                padding: 13px 35px;
+                padding: 18px 25px;
               }
               @include screensize($desktop) {
-                padding: 13px 35px;
-              }
-            }
-            
-            .d-resume {
-              color: var(--button-color);
-              background-color: var(--muted-color);
-              
-              &:hover {
-                color: var(--main-color);
-                background-color: var(--muted-color);
+                padding: 18px 25px;
               }
             }
 
-            .contact {
+            .g-intouch {
               color: #fff;
-              background-color: var(--button-color);
-              
+              background-color: var(--main-color);
+
+              &:hover {
+                color: #fff;
+                background-color: var(--hover-color);
+              }
+            }
+
+            .v-work {
+              color: var(--main-color);
+              background-color: transparent;
+              border: 2px solid var(--main-color);
+
               &:hover {
                 background-color: var(--main-color);
+                color: #fff;
               }
             }
           }
+
+          .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: transparent;
+                color: var(--main-color); // Use your main color
+                font-size: 1.9rem; // Adjust icon size
+                transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+                text-decoration: none;
+        
+                &:hover {
+                    transform: scale(1.2); // Enlarge on hover
+                    background-color: var(--main-color); // Add background color on hover
+                    color: #fff; // Change icon color to white on hover
+                }
+            }
         }
+          }
 
         .myImage {
           grid-area: myImage;
@@ -142,17 +166,17 @@
 
           @include screensize($tablet) {
             display: block;
-
           }
+
           @include screensize($desktop) {
             display: block;
           }
-            .hero-logo {
+
+          .hero-logo {
             border-radius: 90%;
             width: 260px;
             height: 260px;
             margin: 0 auto;
-            
 
             @include screensize($tablet) {
               width: 300px;
@@ -161,9 +185,10 @@
               display: block;
               padding-top: 250px;
             }
+
             @include screensize($desktop) {
               width: 400px;
-              height: 400px;
+              height: 350px;
               border-radius: 40%;
               display: block;
               padding-top: 200px;
@@ -177,7 +202,9 @@
 
 #name {
   transition: opacity 1s ease-in-out;
-  color: var(--main-color);
+  color: var(--paragraph-color);
+  font-size: 2rem;
+  font-weight: 600;
 
   &.fade-out {
     opacity: 0;
@@ -206,94 +233,5 @@
   }
   to {
     opacity: 1;
-  }
-}
-#hero {
-  position: relative;
-  background: #ffffff; // White background
-  overflow: hidden;
-
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-
-    .circle {
-      position: absolute;
-      top: 80vh;
-      left: 45vw;
-      width: 10px;
-      height: 10px;
-      border: solid 1px #5271ff; // Blue border for circles
-      border-radius: 50%; // Make it a circle
-      transform-origin: top left;
-      transform: scale(0) rotate(0deg) translate(-50%, -50%);
-      animation: circle 24s ease-in forwards infinite; // Slower animation
-    }
-
-    .circle:nth-child(2n) {
-      border-color: #5271ff; // Alternate blue shade
-    }
-
-    .circle:nth-child(2) {  
-      animation-delay: 4s;
-      left: 25vw;
-      top: 40vh;
-    }
-
-    .circle:nth-child(3) {
-      animation-delay: 8s;
-      left: 75vw;
-      top: 50vh;
-    }
-
-    .circle:nth-child(4) {
-      animation-delay: 12s;
-      left: 90vw;
-      top: 10vh;
-    }
-
-    .circle:nth-child(5) {
-      animation-delay: 16s;
-      left: 10vw;
-      top: 85vh;
-    }
-    .circle:nth-child(6) {
-      animation-delay: 20s;
-      left: 50vw;
-      top: 10vh;
-    }
-  
-    .circle:nth-child(7) {
-      animation-delay: 24s;
-      left: 20vw;
-      top: 30vh;
-    }
-    .circle:nth-child(8) {
-      animation-delay: 20s;
-      left: 50vw;
-      top: 10vh;
-    }
-
-    .circle:nth-child(9) {
-      animation-delay: 24s;
-      left: 20vw;
-      top: 30vh;
-    }
-  }
-}
-
-// Keyframes for circle animation
-@keyframes circle {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
   }
 }

@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
@@ -7,9 +7,12 @@
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
   --muted-color: #eee;
-  --main-color: #5271ff;
+  --main-color: #3b82f6;
+  --hover-color: #2d5eac;
+  --second-color: #cadcee;
   --black-color: #000;
   --button-color: #5b5b5b;
+  --paragraph-color: #919191;
 }
 
 :root html,
@@ -35,19 +38,21 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background-color: #f8fafc;
 }
 
 #hero {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  margin-bottom: 200px;
 }
 #hero.fade-in {
   opacity: 1;
   transform: translateY(0);
 }
 #hero .hero-wrapper {
-  max-width: 1200px;
+  max-width: 1330px;
   margin: 0 auto;
 }
 #hero .hero-wrapper .hero-inner .hero-content {
@@ -62,11 +67,8 @@ html {
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content {
-    padding-left: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 90px;
-    margin-bottom: 280px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -74,14 +76,11 @@ html {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "intro myImage";
-    padding-left: 90px;
-    margin-top: 90px;
-    margin-bottom: 280px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro {
   grid-area: intro;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
   padding: 20px;
   padding-top: 120px;
   padding-bottom: 100px;
@@ -98,35 +97,35 @@ html {
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro {
     padding: 0;
-    padding-top: 270px;
+    padding-top: 200px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-text {
+  margin: 0;
   font-size: 1.3rem;
-  margin-bottom: 15px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 0.5s forwards;
+  color: var(--main-color);
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
   font-size: 1.7rem;
-  margin-bottom: 15px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1s forwards;
 }
 @media screen and (min-width: 712px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
-    font-size: 2.7rem;
+    font-size: 4rem;
   }
 }
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
-    font-size: 2.7rem;
+    font-size: 65px;
   }
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-subtitle {
   line-height: 1.3rem;
   font-size: 1rem;
-  margin-bottom: 20px;
+  max-width: 600px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1.5s forwards;
 }
@@ -136,39 +135,64 @@ html {
   opacity: 0;
   animation: fadeIn 1s ease-in-out 2s forwards;
 }
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .g-intouch, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .v-work {
   padding: 12px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 50px;
+  border-radius: 10px;
   font-size: 1rem;
   font-weight: 600;
   transition: all 0.5s ease;
 }
 @media screen and (min-width: 712px) {
-  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-    padding: 13px 35px;
+  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .g-intouch, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .v-work {
+    padding: 18px 25px;
   }
 }
 @media screen and (min-width: 1024px) {
-  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
-    padding: 13px 35px;
+  #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .g-intouch, #hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .v-work {
+    padding: 18px 25px;
   }
 }
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume {
-  color: var(--button-color);
-  background-color: var(--muted-color);
-}
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .d-resume:hover {
-  color: var(--main-color);
-  background-color: var(--muted-color);
-}
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact {
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .g-intouch {
   color: #fff;
-  background-color: var(--button-color);
-}
-#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .contact:hover {
   background-color: var(--main-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .g-intouch:hover {
+  color: #fff;
+  background-color: var(--hover-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .v-work {
+  color: var(--main-color);
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .d-buttons .v-work:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: var(--main-color);
+  font-size: 1.9rem;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+}
+#hero .hero-wrapper .hero-inner .hero-content .intro .social-icons a:hover {
+  transform: scale(1.2);
+  background-color: var(--main-color);
+  color: #fff;
 }
 #hero .hero-wrapper .hero-inner .hero-content .myImage {
   grid-area: myImage;
@@ -204,7 +228,7 @@ html {
 @media screen and (min-width: 1024px) {
   #hero .hero-wrapper .hero-inner .hero-content .myImage .hero-logo {
     width: 400px;
-    height: 400px;
+    height: 350px;
     border-radius: 40%;
     display: block;
     padding-top: 200px;
@@ -213,7 +237,9 @@ html {
 
 #name {
   transition: opacity 1s ease-in-out;
-  color: var(--main-color);
+  color: var(--paragraph-color);
+  font-size: 2rem;
+  font-weight: 600;
 }
 #name.fade-out {
   opacity: 0;
@@ -238,84 +264,5 @@ html {
   }
   to {
     opacity: 1;
-  }
-}
-#hero {
-  position: relative;
-  background: #ffffff;
-  overflow: hidden;
-}
-#hero .background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-#hero .background .circle {
-  position: absolute;
-  top: 80vh;
-  left: 45vw;
-  width: 10px;
-  height: 10px;
-  border: solid 1px #5271ff;
-  border-radius: 50%;
-  transform-origin: top left;
-  transform: scale(0) rotate(0deg) translate(-50%, -50%);
-  animation: circle 24s ease-in forwards infinite;
-}
-#hero .background .circle:nth-child(2n) {
-  border-color: #5271ff;
-}
-#hero .background .circle:nth-child(2) {
-  animation-delay: 4s;
-  left: 25vw;
-  top: 40vh;
-}
-#hero .background .circle:nth-child(3) {
-  animation-delay: 8s;
-  left: 75vw;
-  top: 50vh;
-}
-#hero .background .circle:nth-child(4) {
-  animation-delay: 12s;
-  left: 90vw;
-  top: 10vh;
-}
-#hero .background .circle:nth-child(5) {
-  animation-delay: 16s;
-  left: 10vw;
-  top: 85vh;
-}
-#hero .background .circle:nth-child(6) {
-  animation-delay: 20s;
-  left: 50vw;
-  top: 10vh;
-}
-#hero .background .circle:nth-child(7) {
-  animation-delay: 24s;
-  left: 20vw;
-  top: 30vh;
-}
-#hero .background .circle:nth-child(8) {
-  animation-delay: 20s;
-  left: 50vw;
-  top: 10vh;
-}
-#hero .background .circle:nth-child(9) {
-  animation-delay: 24s;
-  left: 20vw;
-  top: 30vh;
-}
-
-@keyframes circle {
-  from {
-    transform: scale(0) rotate(0deg) translate(-50%, -50%);
-    opacity: 1;
-  }
-  to {
-    transform: scale(20) rotate(960deg) translate(-50%, -50%);
-    opacity: 0;
   }
 }

@@ -12,17 +12,20 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navbar -->
     <nav class="nav">
         <div class="container">
             <div class="header">
-                <img src="assets/myLogo.svg" alt="Logo" class="header-logo">
+                <h1 class="logo-text">WS<span class="logo-text-dot">.</span></h1>
             </div>
             <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -32,28 +35,28 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <div class="background">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            
-        </div>
         <div class="hero-wrapper">
             <div class="hero-inner">
                 <div class="hero-content">
                     <div class="intro">
-                        <p class="intro-text">Welcome to my portfolio!</p>
-                        <h1 class="intro-title">Hi, I'm <span id="name">Wilmer Suelo</span></h1>
+                        <p class="intro-text">Hello, I'm</p>
+                        <h1 class="intro-title">Wilmer Suelo</h1>
+                        <span id="name"></span>
                         <p class="intro-subtitle">A Software Technology student specializing in front-end development, creating smooth and interactive web experiences. Constantly improving and refining my skills!</p>
                         <div class="d-buttons">
-                            <button class="d-resume" onclick="alert('Coming Soon!')">Download Resume</button>
-                            <button class="contact" onclick="location.href='#contact'">Contact</button>
+                            <button class="g-intouch" onclick="alert('Coming Soon!')">Get in Touch</button>
+                            <button class="v-work" onclick="location.href='#projects'">View My Work</button>
+                        </div>
+                        <div class="social-icons">
+                            <a href="https://github.com/Wilmer27-ai" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/wilmer_suelo/" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
                         </div>
                     </div>
                     <div class="myImage">
@@ -63,6 +66,22 @@
             </div>
         </div>
     </section>
+
+    <section id="about">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="content">
+                    <div class="about-header">
+                        <h1 class="header">About Me</h1>
+                        <div class="divider"></div> <!-- Divider -->
+                        <p class="about-p">Get to know me and my journey in web development</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- Projects Section -->
     <section id="projects">

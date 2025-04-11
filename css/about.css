@@ -41,36 +41,39 @@ html {
   background-color: #f8fafc;
 }
 
-.footer-wrapper {
-  font-family: "Poppins", sans-serif;
-  line-height: 1rem;
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
+#about {
+  margin-bottom: 100px;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 1s ease-in-out forwards;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  background-color: white;
 }
-.footer-wrapper .footer-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+#about.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
-.footer-wrapper .footer-content {
+#about .wrapper .inner .content .about-header {
   text-align: center;
+  margin-bottom: 60px;
+  font-family: "Poppins", sans-serif;
 }
-.footer-wrapper .footer-content p {
+#about .wrapper .inner .content .about-header .header {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+#about .wrapper .inner .content .about-header .divider {
+  width: 100px;
+  height: 4px;
+  background-color: var();
+  margin: 0 auto;
+  margin: 10px auto;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+  background-color: var(--main-color);
+}
+#about .wrapper .inner .content .about-header .about-p {
   margin: 0;
-  font-size: 0.9em;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(0px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

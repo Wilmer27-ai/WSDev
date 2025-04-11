@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Show navbar smoothly
     setTimeout(() => {
         nav.classList.add("nav-animate");
-    }, 200);
+    }, 400);
 
     // Show logo with bounce effect
     setTimeout(() => {
@@ -29,17 +29,5 @@ document.addEventListener("DOMContentLoaded", function () {
         anchor.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
     });
 
-    // Hide/show navbar on scroll
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll down
-            nav.classList.add("nav-hide");
-        } else {
-            // Scroll up
-            nav.classList.remove("nav-hide");
-        }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
-    });
+    // Removed the scroll event listener for hiding/showing navbar
 });

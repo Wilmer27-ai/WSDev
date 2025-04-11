@@ -1,39 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const nameElement = document.getElementById("name");
-    const texts = ["Wilmer Suelo", "a Web Developer."];
+    const text = "eb Developer"; // Exclude the "W" from the animation text
+    let isReversing = false;
     let currentIndex = 0;
 
-    function changeText() {
-        // Add fade-out effect
-        nameElement.classList.add("fade-out");
+    function animateText() {
+        if (!isReversing) {
+            currentIndex++;
+            if (currentIndex > text.length) {
+                isReversing = true;
+                currentIndex = text.length - 1;
+            }
+        } else {
+            currentIndex--;
+            if (currentIndex < 0) {
+                isReversing = false;
+                currentIndex = 1;
+            }
+        }
 
-        setTimeout(() => {
-            currentIndex = (currentIndex + 1) % texts.length;
-            nameElement.textContent = texts[currentIndex];
-
-            // Remove fade-out and add fade-in
-            nameElement.classList.remove("fade-out");
-            nameElement.classList.add("fade-in");
-
-            // Remove fade-in after animation completes
-            setTimeout(() => {
-                nameElement.classList.remove("fade-in");
-            }, 1000); // Match CSS animation duration
-        }, 1000); // Wait for fade-out duration
+        nameElement.textContent = "W" + text.slice(0, currentIndex); // Always prepend "W"
     }
 
-    // Run the text change every 4 seconds
-    setInterval(changeText, 4000);
+    // Run the animation every 200ms
+    setInterval(animateText, 200);
 });
 
-
 //click copy effects
-document.getElementById('facebook-link').addEventListener('click', function(event) {
+document.getElementById('facebook-link').addEventListener('click', function (event) {
     event.preventDefault();
     copyToClipboard('Wilmer Suelo');
 });
 
-document.getElementById('phone-link').addEventListener('click', function(event) {
+document.getElementById('phone-link').addEventListener('click', function (event) {
     event.preventDefault();
     copyToClipboard('+639469485103');
 });
