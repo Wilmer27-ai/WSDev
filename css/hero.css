@@ -83,8 +83,7 @@ html {
 #hero .hero-wrapper .hero-inner .hero-content .intro {
   grid-area: intro;
   font-family: "Poppins", sans-serif;
-  padding: 20px;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 100px;
 }
 @media screen and (min-width: 712px) {
@@ -110,7 +109,7 @@ html {
   color: var(--main-color);
 }
 #hero .hero-wrapper .hero-inner .hero-content .intro .intro-title {
-  font-size: 46px;
+  font-size: 44px;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1s forwards;
 }
