@@ -113,16 +113,19 @@
             }
             .details {
               display: grid;
-              grid-template-columns: 1fr 1fr;
-              grid-gap: 20px;
+              grid-template-columns: 1fr;
+             
+              
               font-family: $font;
 
               @include screensize($tablet) {
                 grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+                grid-gap: 20px;
 
               }
               @include screensize($desktop) {
                 grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+                grid-gap: 20px;
               }
 
               .n-location {
@@ -130,12 +133,15 @@
                   font-weight: 200;
                   font-size: 1rem;
                   color: var(--main-color);
+
+                  
                 }
                 p {
                   margin: 5px 0 15px 0;
                   font-size: 1rem;
                   color: #666;
                 }
+             
               }
               .e-availability {
                 h1 {

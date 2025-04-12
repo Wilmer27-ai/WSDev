@@ -149,18 +149,19 @@ html {
 }
 #about .wrapper .inner .content .about-container .details {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr;
   font-family: "Poppins", sans-serif;
 }
 @media screen and (min-width: 712px) {
   #about .wrapper .inner .content .about-container .details {
     grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+    grid-gap: 20px;
   }
 }
 @media screen and (min-width: 1024px) {
   #about .wrapper .inner .content .about-container .details {
     grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+    grid-gap: 20px;
   }
 }
 #about .wrapper .inner .content .about-container .details .n-location h1 {
