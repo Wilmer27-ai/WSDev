@@ -38,6 +38,18 @@ const projects = [
         ],
         link: "https://staging.callboxinc.com/wilmer-v2/#",
         github: "Not-available-to-public"
+    },
+    {
+        title: "Bogs Glass Store Website",
+        description: "Bogs Glass Aluminum Website was my first website, built using only HTML and CSS. It introduced me to web development and sparked my passion for front-end design.",
+        image: "assets/bogs-glass.png",
+        techStack: [
+            "fab fa-html5", // HTML icon
+            "fab fa-css3-alt", // CSS icon
+            
+        ],
+        link: "https://wilmer27-ai.github.io/bogs-glass-store/#section1",
+        github: "https://github.com/Wilmer27-ai/bogs-glass-store"
     }
 ];
 
