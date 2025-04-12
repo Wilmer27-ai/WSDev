@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
@@ -7,9 +7,12 @@
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
   --muted-color: #eee;
-  --main-color: #5271ff;
+  --main-color: #3b82f6;
+  --hover-color: #2d5eac;
+  --second-color: #cadcee;
   --black-color: #000;
   --button-color: #5b5b5b;
+  --paragraph-color: #919191;
 }
 
 :root html,
@@ -35,10 +38,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background-color: #f8fafc;
 }
 
 .footer-wrapper {
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1rem;
   background-color: #333;
   color: #fff;

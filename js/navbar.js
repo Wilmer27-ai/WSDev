@@ -1,20 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nav = document.querySelector(".nav");
-    const logo = document.querySelector(".header-logo");
     const navLinks = document.querySelectorAll(".nav-links li");
+    const sections = document.querySelectorAll("section");
 
     // Show navbar smoothly
     setTimeout(() => {
         nav.classList.add("nav-animate");
-    }, 200);
-
-    // Show logo with bounce effect
-    setTimeout(() => {
-        logo.classList.add("animate__animated", "animate__bounceInDown");
-        logo.style.opacity = "1"; // Ensure visibility
     }, 400);
 
-    // Slide down nav links one by one
+    // Slide down nav links one by one with bounce effect
     navLinks.forEach((link, index) => {
         setTimeout(() => {
             link.classList.add("animate__animated", "animate__bounceInDown");
@@ -22,24 +16,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 600 + index * 200);
     });
 
+    // Highlight active link based on scroll position
+    window.addEventListener("scroll", () => {
+        let currentSection = "";
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 80; // Adjust for navbar height
+            const sectionHeight = section.offsetHeight;
+
+            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                currentSection = section.getAttribute("id");
+            }
+        });
+
+        navLinks.forEach(link => {
+            const anchor = link.querySelector("a");
+            if (anchor) {
+                anchor.classList.remove("active");
+                if (anchor.getAttribute("href").substring(1) === currentSection) {
+                    anchor.classList.add("active");
+                }
+            }
+        });
+    });
+
     // Letter animation inside nav links
     navLinks.forEach(link => {
         const anchor = link.querySelector("a");
-        const text = anchor.textContent.trim();
-        anchor.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
-    });
-
-    // Hide/show navbar on scroll
-    let lastScrollTop = 0;
-    window.addEventListener("scroll", function () {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop) {
-            // Scroll down
-            nav.classList.add("nav-hide");
-        } else {
-            // Scroll up
-            nav.classList.remove("nav-hide");
+        if (anchor) {
+            const text = anchor.textContent.trim();
+            anchor.innerHTML = text.split('').map(letter => `<span>${letter}</span>`).join('');
         }
-        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
     });
 });

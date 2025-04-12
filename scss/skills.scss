@@ -1,0 +1,148 @@
+@use "scss_partials/general" as *;
+
+#skills {
+    margin-bottom: 100px;
+    opacity: 0; // Initially hidden
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+
+    &.fade-in {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &.fade-out {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    .wrapper {
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            .content {
+                .skills-header {
+                    text-align: center;
+                    margin: 100px 0 60px 0;
+                    font-family: $font;
+
+                    .header {
+                        font-size: 2.5rem;
+                        font-weight: 700;
+                        color: #333;
+                        opacity: 0;
+                        animation: fadeIn 1s ease-in-out 0.5s forwards;
+                    }
+
+                    .divider {
+                        width: 100px;
+                        height: 4px;
+                        background-color: var(--main-color);
+                        margin: 10px auto;
+                        margin-bottom: 20px;
+                        opacity: 0;
+                        animation: fadeIn 1s ease-in-out 0.5s forwards;
+                    }
+
+                    .sklls-p {
+                        margin: 0;
+                    }
+                }
+
+                .skills-container {
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr); // Fixed to 4 boxes per row
+                    gap: 20px;
+                    margin: 40px 20px 0 20px;
+
+                    @include screensize($tablet) {
+                        grid-template-columns: repeat(2, 1fr); // 2 boxes per row on smaller screens
+                    }
+
+                    @include screensize($desktop) {
+                        grid-template-columns: repeat(4, 1fr); // 1 box per row on mobile
+                        
+                    }
+                
+                    .skill-box {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        padding: 20px;
+                        background-color: #f9f9f9;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+                            i {
+                                transform: scale(1.2);
+                                color: var(--hover-color); // Optional hover color
+                            }
+                        }
+                
+                        i {
+                            font-size: 3rem; // Adjust icon size
+                            color: var(--main-color); // Use your main color
+                            margin-bottom: 10px;
+                            transition: transform 0.3s ease, color 0.3s ease;
+                        }
+                
+                        p {
+                            font-family: $font;
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: #333;
+                            margin: 0;
+                        }
+                    }
+                    
+                }
+                .skills-percentage {
+                    margin: 40px auto; // Center the section horizontally
+                    padding: 15px 50px; // Add padding to the left and right
+                    display: block; // Change from grid to block for proper margin behavior
+
+                    @include screensize($tablet) {
+                        padding: 15px 150px; // Adjust padding for smaller screens
+                    }
+
+                    @include screensize($desktop) {
+                        padding: 15px 150px; // Adjust padding for larger screens
+                    }
+                
+                    .skill-progress {
+                        margin-bottom: 20px;
+                
+                        p {
+                            font-family: $font;
+                            font-size: 1rem;
+                            font-weight: 200;
+                            color: #333;
+                            margin-bottom: 5px;
+                        }
+                
+                        .progress-bar {
+                            width: 100%;
+                            height: 10px;
+                            background-color: #e0e0e0;
+                            border-radius: 5px;
+                            overflow: hidden;
+                
+                            .progress {
+                                width: 0; // Initially hidden
+                                height: 100%;
+                                background-color: var(--main-color);
+                                border-radius: 5px;
+                                transition: width 1s ease-in-out;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

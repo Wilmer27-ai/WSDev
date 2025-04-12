@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
@@ -7,9 +7,12 @@
   --background-color: #ecf0f1;
   --text-color: #2c3e50;
   --muted-color: #eee;
-  --main-color: #5271ff;
+  --main-color: #3b82f6;
+  --hover-color: #2d5eac;
+  --second-color: #cadcee;
   --black-color: #000;
   --button-color: #5b5b5b;
+  --paragraph-color: #919191;
 }
 
 :root html,
@@ -35,10 +38,11 @@ body {
 
 html {
   scroll-behavior: smooth;
+  background-color: #f8fafc;
 }
 
 .nav {
-  height: 100px;
+  height: 80px;
   position: fixed;
   width: 100%;
   top: -100px;
@@ -49,6 +53,7 @@ html {
   backdrop-filter: blur(10px);
   opacity: 0;
   visibility: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 .nav.nav-animate {
   top: 0;
@@ -66,41 +71,43 @@ html {
 }
 @media screen and (min-width: 712px) {
   .nav .container {
-    padding: 20px 100px;
+    padding: 20px 40px;
   }
 }
 @media screen and (min-width: 1024px) {
   .nav .container {
-    padding: 20px 100px;
+    padding: 20px 60px;
   }
 }
 .nav .header {
   display: flex;
   align-items: center;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
 }
-.nav .header .header-logo {
-  width: 70px;
-  height: 70px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+.nav .header .logo-text {
+  color: var(--main-color);
+}
+.nav .header .logo-text .logo-text-dot {
+  color: var(--black-color);
 }
 .nav .nav-links {
   display: flex;
   gap: 10px;
   list-style: none;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
   font-weight: 200;
 }
 @media screen and (min-width: 712px) {
   .nav .nav-links {
-    gap: 45px;
+    gap: 30px;
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .nav .nav-links {
-    gap: 50px;
+    gap: 30px;
     font-size: 1.2rem;
   }
 }
@@ -114,33 +121,33 @@ html {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
-  display: inline-block;
 }
 .nav .nav-links li a::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
-  background-color: var(--main-color);
+  height: 2px;
+  background-color: transparent;
   left: 0;
-  bottom: 0;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.4s ease-in-out;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .nav .nav-links li a:hover::after {
-  transform: scaleY(1);
+  transform: scaleX(1);
+  background-color: var(--main-color);
 }
 .nav .nav-links li a:hover {
   color: var(--main-color);
 }
-.nav .nav-links li a span {
-  display: inline-block;
-  transform: translateY(0);
-  transition: transform 0.2s ease;
+.nav .nav-links li a.active {
+  color: var(--main-color);
+  font-weight: 200;
 }
-.nav .nav-links li a:hover span {
-  transform: translateY(-10%);
+.nav .nav-links li a.active::after {
+  transform: scaleX(1);
+  background-color: var(--main-color);
 }
 
 @keyframes fadeIn {
