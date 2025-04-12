@@ -92,7 +92,7 @@ html {
 }
 @media screen and (min-width: 712px) {
   #projects .wrapper .inner .content .projects-list {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 @media screen and (min-width: 1024px) {
