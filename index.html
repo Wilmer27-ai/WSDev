@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -26,8 +27,8 @@
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#resume">Resume</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -44,7 +45,7 @@
                         <span id="name"></span>
                         <p class="intro-subtitle">A Software Technology student specializing in front-end development, creating smooth and interactive web experiences. Constantly improving and refining my skills!</p>
                         <div class="d-buttons">
-                            <button class="g-intouch" onclick="alert('Coming Soon!')">Get in Touch</button>
+                            <button class="g-intouch" onclick="location.href='#contact'">Get in Touch</button>
                             <button class="v-work" onclick="location.href='#projects'">View My Work</button>
                         </div>
                         <div class="social-icons">
@@ -60,7 +61,7 @@
                         </div>
                     </div>
                     <div class="myImage">
-                        <img src="assets/hero-image.svg" alt="Logo" class="hero-logo" width="100" height="100">
+                        <img src="assets/hero-image (1).svg" alt="Logo" class="hero-logo" width="100" height="100">
                     </div>
                 </div>
             </div>
@@ -76,9 +77,118 @@
                         <div class="divider"></div> <!-- Divider -->
                         <p class="about-p">Get to know me and my journey in web development</p>
                     </div>
+                        <div class="about-container">
+                            <div class="image">
+                                <img src="assets/image2.svg" style="height: 100; width: 100;" alt="Resume Image">
+                            </div>
+                            <div class="about-me">
+                                <h2>Who am I?</h2>
+                                <p>I'm Wilmer Suelo, a passionate web developer dedicated to creating engaging digital experiences. With a keen eye for design and a love for clean code, I strive to build websites that not only look great but also perform exceptionally.</p>
+                                <p>My journey in web development started with curiosity and has evolved into a professional pursuit of excellence. I continuously learn new technologies and best practices to deliver cutting-edge solutions.</p>
+                                <div class="details">
+                                    <div class="n-location">
+                                        <h1>Name:</h1>
+                                        <p>Wilmer Suelo</p>
+                                        <h1>Location:</h1>
+                                        <p>Philippines</p>
+                                    </div>
+                                    <div class="e-availability">
+                                        <h1>Email:</h1>
+                                        <p>suelowilmer27@gmail.com</p>
+                                        <h1>Availability:</h1>
+                                        <p>Open to opportunities</p>
+                                    </div>
+                                </div>
+                                <button class="download-cv" onclick="alert('Coming Soon!')">
+                                    Download CV
+                                    <i class="fas fa-download"></i> 
+                                </button>
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="skills">
+        <div class="wrapper">
+            <div class="inner">
+                <div class="content">
+                    <div class="skills-header">
+                        <h1 class="header">My Skills</h1>
+                        <div class="divider"></div> <!-- Divider -->
+                        <p class="sklls-p">Technologies and tools I work with</p>
+                    </div>
+                    <div class="skills-container">
+                        <div class="skill-box">
+                            <i class="fab fa-html5"></i>
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-css3-alt"></i>
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-js"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-sass"></i>
+                            <p>SASS</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-git-alt"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-php"></i>
+                            <p>PHP</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fas fa-database"></i>
+                            <p>Firebase</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-bootstrap"></i>
+                            <p>Bootstrap</p>
+                        </div>
+                        <div class="skill-box">
+                            <i class="fab fa-wordpress"></i>
+                            <p>WordPress</p>
+                        </div>
+                    </div>
+                    <div class="skills-percentage">
+                        <div class="skill-progress">
+                            <p>Frontend Development</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-percentage="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <p>Backend Development</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-percentage="50"></div>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <p>UI/UX Design</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-percentage="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-progress">
+                            <p>Responsive Design</p>
+                            <div class="progress-bar">
+                                <div class="progress" data-percentage="80"></div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
     
@@ -88,8 +198,10 @@
         <div class="wrapper">
             <div class="inner">
                 <div class="content">
-                    <div class="projects-header">
-                        <h1>My journey in designing and developing websites</h1>
+                    <div class="project-header">
+                        <h1 class="header">My Projects</h1>
+                        <div class="divider"></div> <!-- Divider -->
+                        <p class="project-p">Check out some of my recent work</p>
                     </div>
                     <div class="projects-list"></div>
                 </div>
@@ -97,43 +209,7 @@
         </div>
     </section>
 
-    <!-- Resume Section -->
-    <section id="resume">
-        <div class="wrapper">
-            <div class="inner">
-                <div class="resume-header">
-                    <h1>Building with These Technologies</h1>
-                </div>
-                <div class="content">
-                    <div class="image">
-                        <img src="assets/image2.svg" style="height: 100%; width: 100%;" alt="Resume Image">
-                    </div>
-                    <div class="resume-info">
-                        <div class="name-container">
-                            <h1>Wilmer L. Suelo</h1>
-                        </div>
-                        <div class="info-container">
-                            <p>I am a passionate web developer currently pursuing a <strong>Bachelor of Science in Information Technology</strong>, majoring in <strong>Software Technology</strong>. I enjoy building responsive and interactive web applications, continuously learning new technologies, and improving my development skills.</p>
-                        </div>
-                        <div class="skills-container">
-                            <h2>I have experience working with the following technologies:</h2>
-                            <ul>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg" alt="SASS Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg" alt="GIT Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg" alt="Firebase Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap Logo"></li>
-                                <li><img src="https://upload.wikimedia.org/wikipedia/commons/0/09/Wordpress-Logo.svg" alt="WordPress Logo"></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>    
-    </section>
+  
 
     <!-- Contact Section -->
     <section id="contact">
@@ -141,7 +217,9 @@
             <div class="contact-inner">
                 <div class="contact-content">
                     <div class="contact-header">
-                        <h1>Get in Touch</h1>
+                        <h1 class="header">Get In Touch</h1>
+                        <div class="divider"></div> <!-- Divider -->
+                        <p class="contact-p">Have a project in mind? Let's work together!</p>
                     </div>
                     <div class="contact-form">
                         <div class="contact-card">
@@ -167,10 +245,30 @@
                             </div>
                             <div class="social-media">
                                 <ul>
-                                    <li><a href="https://www.facebook.com/wilmer.suelo" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo"><span>Facebook</span> </a></li>
-                                    <li><a href="https://github.com/Wilmer27-ai" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub Logo"><span>GitHub</span> </a></li>
-                                    <li><a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn Logo"><span>LinkedIn</span> </a></li>
-                                    <li><a href="https://www.instagram.com/wilmer_suelo/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo"><span>Instagram</span> </a></li>
+                                    <li>
+                                        <a href="https://www.facebook.com/wilmer.suelo" target="_blank">
+                                            <i class="fab fa-facebook-f"></i>
+                                            <span>Facebook</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://github.com/Wilmer27-ai" target="_blank">
+                                            <i class="fab fa-github"></i>
+                                            <span>GitHub</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.linkedin.com/in/wilmer-suelo-b88b94259/" target="_blank">
+                                            <i class="fab fa-linkedin-in"></i>
+                                            <span>LinkedIn</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.instagram.com/wilmer_suelo/" target="_blank">
+                                            <i class="fab fa-instagram"></i>
+                                            <span>Instagram</span>
+                                        </a>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -196,5 +294,7 @@
     <script src="js/navbar.js"></script>
     <script src="js/scrollEffects.js"></script>
     <script src="js/contact.js"></script>
+    <script src="js/skills.js"></script>
+    <script src="js/about.js"></script>
 </body>
 </html>

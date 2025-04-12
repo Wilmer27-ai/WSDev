@@ -61,15 +61,27 @@ html {
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-header {
   text-align: center;
-  margin-bottom: 60px;
-}
-#contact .contact-wrapper .contact-inner .contact-content .contact-header h1 {
+  margin: 50px 0 60px 0;
   font-family: "Poppins", sans-serif;
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-header .header {
   font-size: 2.5rem;
-  font-weight: 200;
+  font-weight: 700;
   color: #333;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-header .divider {
+  width: 100px;
+  height: 4px;
+  background-color: var(--main-color);
+  margin: 10px auto;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+#contact .contact-wrapper .contact-inner .contact-content .contact-header .contact-p {
+  margin: 0;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form {
   display: flex;
@@ -141,47 +153,60 @@ html {
   background-color: #ccc;
   margin: 1rem 0;
 }
+#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+@media screen and (min-width: 712px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media {
+    justify-content: center;
+    align-items: center;
+  }
+}
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
   list-style: none;
   padding: 0;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  gap: 15px;
+  justify-content: left;
+  align-items: left;
 }
 @media screen and (min-width: 712px) {
   #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
     flex-direction: column;
+    align-items: left;
   }
 }
 @media screen and (min-width: 1024px) {
   #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul {
     flex-direction: column;
+    align-items: left;
   }
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li {
-  margin: 0 10px;
+  margin: 0;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
   display: flex;
   align-items: center;
+  justify-content: left;
   text-decoration: none;
-  color: #666;
-}
-@media screen and (min-width: 712px) {
-  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
-    padding-left: 40px;
-    display: flex;
-    padding-top: 20px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a {
-    padding-left: 40px;
-    display: flex;
-    padding-top: 20px;
-  }
+  color: var(--main-color);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a span {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #666;
   display: none;
 }
 @media screen and (min-width: 712px) {
@@ -194,22 +219,9 @@ html {
     display: inline-block;
   }
 }
-#contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
-  width: 25px;
-  height: 25px;
-}
-@media screen and (min-width: 712px) {
-  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
-    margin-right: 5px;
-  }
-}
-@media screen and (min-width: 1024px) {
-  #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a img {
-    margin-right: 5px;
-  }
-}
 #contact .contact-wrapper .contact-inner .contact-content .contact-form .contact-card .social-media ul li a:hover {
-  color: #0056b3;
+  transform: scale(1);
+  color: var(--hover-color);
 }
 
 @keyframes fadeInUp {

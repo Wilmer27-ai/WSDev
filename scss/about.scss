@@ -1,49 +1,196 @@
 @use "scss_partials/general" as *;
 
 #about {
-    margin-bottom: 100px;
-    opacity: 0; // Initially hidden
-    transform: translateY(30px);
-    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
-    background-color: white;
+  margin-bottom: 100px;
+  opacity: 0; // Initially hidden
+  transform: translateY(30px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
-    &.fade-in {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  &.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+  }
 
-    .wrapper {
-        .inner {
-            .content {
-                .about-header {
-                    text-align: center;
-                    margin-bottom: 60px;
-                    font-family: $font;
+  &.fade-out {
+      opacity: 0;
+      transform: translateY(30px);
+  }
 
+  .wrapper {
+      .inner {
+          max-width: 1200px;
+          margin: 0 auto;
 
-                    .header {
-                        font-size: 2.5rem;
-                        font-weight: 700;
-                        color: #333;
-                        opacity: 0;
-                        animation: fadeIn 1s ease-in-out 0.5s forwards;
-                    }
-                    .divider{
-                        width: 100px;
-                        height: 4px;
-                        background-color: var();
-                        margin: 0 auto;
-                        margin: 10px auto;
-                        opacity: 0;
-                        animation: fadeIn 1s ease-in-out 0.5s forwards;
-                        background-color: var(--main-color);
-                    }
-                    .about-p{
-                        margin: 0;
+          .content {
+              opacity: 0;
+              animation: fadeIn 1s ease-in-out forwards;
 
-                    }
-                }
+              .about-header {
+                  text-align: center;
+                  margin: 100px 0 60px 0;
+                  font-family: $font;
+
+                  .header {
+                      font-size: 2.5rem;
+                      font-weight: 700;
+                      color: #333;
+                      opacity: 0;
+                      animation: fadeIn 1s ease-in-out 0.5s forwards;
+                  }
+
+                  .divider {
+                      width: 100px;
+                      height: 4px;
+                      background-color: var(--main-color);
+                      margin: 10px auto;
+                      margin-bottom: 20px;
+                      opacity: 0;
+                      animation: fadeIn 1s ease-in-out 0.5s forwards;
+                  }
+
+                  .about-p {
+                      margin: 0;
+                  }
+              }
+
+              .about-container {
+                  display: grid;
+                  grid-template-columns: 1fr;
+                  grid-gap: 30px;
+                  font-family: $font;
+                  margin: 0 20px 0 20px;
+
+                  @include screensize($tablet) {
+                      grid-template-columns: 1fr;
+                  }
+
+                  @include screensize($desktop) {
+                      grid-template-columns: 1fr 1fr;
+                  }
+
+                  .image {
+                      display: inline-block;
+                      border-radius: 10px;
+                      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                      opacity: 0;
+                      animation: fadeIn 1s ease-in-out 0.5s forwards;
+                      background-color: #f8fafc;
+                      width: 100%;
+                      max-width: 480px;
+                      height: auto;
+                      text-align: center;
+                      margin-left: auto;
+                      margin-right: auto;
+
+                      img {
+                          display: block;
+                          width: 100%;
+                          height: 100%;
+                          border-radius: inherit;
+                      }
+                  }
+
+                  .about-me {
+                      font-size: 1rem;
+                      line-height: 1.5;
+                      color: black;
+                      opacity: 0;
+                      animation: fadeIn 1s ease-in-out 0.5s forwards;
+                      margin-top: 20px;
+                      text-align: left;
+                      max-width: 600px;
+
+                      @include screensize($tablet) {
+                          text-align: center;
+                          margin-left: auto;
+                          margin-right: auto;
+                      }
+
+                      @include screensize($desktop) {
+                          margin-left: auto;
+                          text-align: left;
+              }
             }
-        }
+            .details {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              grid-gap: 20px;
+              font-family: $font;
+
+              @include screensize($tablet) {
+                grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+
+              }
+              @include screensize($desktop) {
+                grid-template-columns: 1fr 1fr; /* Stacks the columns on smaller screens */
+              }
+
+              .n-location {
+                h1 {
+                  font-weight: 200;
+                  font-size: 1rem;
+                  color: var(--main-color);
+                }
+                p {
+                  margin: 5px 0 15px 0;
+                  font-size: 1rem;
+                  color: #666;
+                }
+              }
+              .e-availability {
+                h1 {
+                  font-weight: 400;
+                  font-size: 1rem;
+                  color: var(--main-color);
+                }
+                p {
+                  margin: 5px 0 15px 0;
+                  font-size: 1rem;
+                  color: #666;
+                }
+              }
+            }
+            .download-cv {
+              margin-top: 10px;
+              background-color: var(--main-color);
+              padding: 18px 20px;
+              border: none;
+              cursor: pointer;
+              border-radius: 10px;
+              font-size: 1rem;
+              font-weight: 200;
+              transition: all 0.5s ease;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center; /* Ensures proper alignment */
+              gap: 5px;
+
+              @include screensize($tablet) {
+              margin-left: auto;
+              margin-right: auto; /* Centers the button horizontally */
+              }
+              @include screensize($desktop) {
+              margin-left: 0; /* Aligns the button to the left */
+              margin-right: auto;
+              justify-content: flex-start; /* Aligns content to the left */
+              }
+            
+
+              i {
+                font-size: 0.8rem;
+                display: flex; /* Ensures the icon is properly centered */
+                align-items: center; /* Centers the icon vertically */
+              }
+
+              &:hover {
+                background-color: var(--hover-color);
+              }
+            }
+            }
+          }
+        
+      }
     }
-}
+  }
+

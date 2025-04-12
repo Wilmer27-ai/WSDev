@@ -71,12 +71,12 @@ html {
 }
 @media screen and (min-width: 712px) {
   .nav .container {
-    padding: 20px 100px;
+    padding: 20px 40px;
   }
 }
 @media screen and (min-width: 1024px) {
   .nav .container {
-    padding: 20px 100px;
+    padding: 20px 60px;
   }
 }
 .nav .header {
@@ -101,13 +101,13 @@ html {
 }
 @media screen and (min-width: 712px) {
   .nav .nav-links {
-    gap: 45px;
+    gap: 30px;
     font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .nav .nav-links {
-    gap: 50px;
+    gap: 30px;
     font-size: 1.2rem;
   }
 }
@@ -121,33 +121,33 @@ html {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s ease;
-  display: inline-block;
 }
 .nav .nav-links li a::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 1px;
-  background-color: var(--main-color);
+  height: 2px;
+  background-color: transparent;
   left: 0;
-  bottom: 0;
-  transform: scaleY(0);
-  transform-origin: bottom;
-  transition: transform 0.4s ease-in-out;
+  bottom: -5px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 .nav .nav-links li a:hover::after {
-  transform: scaleY(1);
+  transform: scaleX(1);
+  background-color: var(--main-color);
 }
 .nav .nav-links li a:hover {
   color: var(--main-color);
 }
-.nav .nav-links li a span {
-  display: inline-block;
-  transform: translateY(0);
-  transition: transform 0.2s ease;
+.nav .nav-links li a.active {
+  color: var(--main-color);
+  font-weight: 200;
 }
-.nav .nav-links li a:hover span {
-  transform: translateY(-10%);
+.nav .nav-links li a.active::after {
+  transform: scaleX(1);
+  background-color: var(--main-color);
 }
 
 @keyframes fadeIn {

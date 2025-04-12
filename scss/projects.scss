@@ -22,40 +22,54 @@
       margin: 0 auto;
 
       .content {
-        .projects-header {
+        .project-header {
           text-align: center;
-          margin: 10px;
+          margin: 100px 0 60px 0;
+          font-family: $font;
 
-          h1 {
-            font-family: $font;
-            font-size: 2.5rem;
-            font-weight: 200;
-            color: #333;
-            opacity: 0;
-            animation: fadeIn 1s ease-in-out 0.5s forwards;
+          .header {
+              font-size: 2.5rem;
+              font-weight: 700;
+              color: #333;
+              opacity: 0;
+              animation: fadeIn 1s ease-in-out 0.5s forwards;
           }
-        }
+
+          .divider {
+              width: 100px;
+              height: 4px;
+              background-color: var(--main-color);
+              margin: 10px auto;
+              margin-bottom: 20px;
+              opacity: 0;
+              animation: fadeIn 1s ease-in-out 0.5s forwards;
+          }
+
+          .project-p {
+              margin: 0;
+          }
+      }
 
         .projects-list {
           display: grid;
           grid-template-columns: 1fr; // Default to one column
           gap: 20px;
           row-gap: 40px;
-          margin: 100px 25px 30px 25px;
+          margin: 20px 25px 30px 25px;
 
           @include screensize($tablet) {
-            grid-template-columns: 1fr 1fr; // Use auto to fit content
+            grid-template-columns: 1fr 1fr 1fr; // Use auto to fit content
           }
 
           @include screensize($desktop) {
-            grid-template-columns: 1fr 1fr; // Use auto to fit content
+            grid-template-columns: 1fr 1fr 1fr; // Use auto to fit content
           }
 
           .project-card {
             display: inline-block;
             width: auto;
             background-color: #f9f9f9;
-            border-radius: 1rem;
+            border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease,
             opacity 0.5s ease;
@@ -121,17 +135,18 @@
                 display: flex;
                 gap: 15px;
                 flex-wrap: wrap;
-
-                .tech-logo {
-                  width: 38px;
-                  height: 38px;
-                  transition: transform 0.3s ease;
-
-                  &:hover {
-                    transform: scale(1.2);
-                  }
+            
+                .tech-icon {
+                    font-size: 2rem; // Adjust icon size
+                    color: var(--main-color); // Use your main color
+                    transition: transform 0.3s ease, color 0.3s ease;
+            
+                    &:hover {
+                        transform: scale(1.2); // Enlarge on hover
+                        color: var(--hover-color); // Optional hover color
+                    }
                 }
-              }
+            }
 
       
 
@@ -139,16 +154,17 @@
                   display: inline-block;
                   margin-top: 20px;
                   padding: 8px 18px;
-                  background-color: var(--muted-color);
-                  color: var(--button-color);
+                  background-color: var(--main-color);
+                  color: white;
 
                   text-decoration: none;
-                  border-radius: 50px;
-                  transition: color 0.3s ease;
+                  border-radius: 10px;
+                  transition: all 0.5s ease;
            
 
                   &:hover {
-                    color: var(--main-color);
+                    color: #fff;
+                    background-color: var(--hover-color);
                   }
                 }
 
@@ -157,14 +173,15 @@
                   display: inline-block;
                   margin-top: 20px;
                   padding: 8px 18px;
-                  background-color: var(--button-color);
-                  color: #fff;
+                  color: var(--main-color);
                   text-decoration: none;
-                  border-radius: 50px;
+                  border-radius: 10px;
+                  border: 2px solid var(--main-color);
                   transition: background-color 0.3s ease;
 
                   &:hover {
                     background-color: var(--main-color);
+                color: #fff;
                   }
                 }
               

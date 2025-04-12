@@ -30,10 +30,10 @@
     justify-content: space-between; // Ensure space between logo and links
     padding: 20px 10px; // Add padding to the sides and top
     @include screensize($tablet) {
-      padding: 20px 100px;
+      padding: 20px 40px;
     }
     @include screensize($desktop) {
-      padding: 20px 100px;
+      padding: 20px 60px;
     }
   }
 
@@ -43,14 +43,12 @@
     font-family: $font;
     font-size: 1.2rem;
 
-
-    .logo-text{
+    .logo-text {
       color: var(--main-color);
 
-      .logo-text-dot{
+      .logo-text-dot {
         color: var(--black-color);
       }
-
     }
   }
 
@@ -63,12 +61,12 @@
     font-weight: 200;
 
     @include screensize($tablet) {
-      gap: 45px;
+      gap: 30px;
       font-size: 1.2rem;
     }
 
     @include screensize($desktop) {
-      gap: 50px;
+      gap: 30px;
       font-size: 1.2rem;
     }
 
@@ -82,40 +80,39 @@
         text-decoration: none;
         color: inherit;
         transition: color 0.3s ease;
-        display: inline-block;
 
         // Underline effect (Bottom to Top)
         &::after {
           content: "";
           position: absolute;
           width: 100%;
-          height: 1px; // Control the line weight here
-          background-color: var(--main-color);
+          height: 2px; // Thickness of the underline
+          background-color: transparent;
           left: 0;
-          bottom: 0;
-          transform: scaleY(0);
-          transform-origin: bottom;
-          transition: transform 0.4s ease-in-out;
+          bottom: -5px; // Position below the text
+          transform: scaleX(0);
+          transform-origin: left;
+          transition: transform 0.3s ease, background-color 0.3s ease;
         }
 
         &:hover::after {
-          transform: scaleY(1);
+          transform: scaleX(1);
+          background-color: var(--main-color);
         }
 
-        // Smooth color change
         &:hover {
           color: var(--main-color);
         }
 
-        // Letter hover animation
-        span {
-          display: inline-block;
-          transform: translateY(0);
-          transition: transform 0.2s ease;
-        }
+        // Active link styles
+        &.active {
+          color: var(--main-color); // Change text color for active link
+          font-weight: 200; // Optional: Make the active link bold
 
-        &:hover span {
-          transform: translateY(-10%);
+          &::after {
+            transform: scaleX(1); // Show underline
+            background-color: var(--main-color);
+          }
         }
       }
     }
