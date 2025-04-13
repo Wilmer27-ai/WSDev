@@ -19,17 +19,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Highlight active link based on scroll position
     window.addEventListener("scroll", () => {
         let currentSection = "";
-
-        sections.forEach(section => {
+    
+        sections.forEach((section) => {
             const sectionTop = section.offsetTop - 80; // Adjust for navbar height
             const sectionHeight = section.offsetHeight;
-
+    
+            // Check if the current scroll position is within the section
             if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
                 currentSection = section.getAttribute("id");
             }
         });
-
-        navLinks.forEach(link => {
+    
+        navLinks.forEach((link) => {
             const anchor = link.querySelector("a");
             if (anchor) {
                 anchor.classList.remove("active");

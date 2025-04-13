@@ -42,6 +42,8 @@ html {
 }
 
 #contact {
+  padding: 100px 0;
+  min-height: 400px;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -61,7 +63,7 @@ html {
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-header {
   text-align: center;
-  margin: 50px 0 60px 0;
+  margin: 100px 0 60px 0;
   font-family: "Poppins", sans-serif;
 }
 #contact .contact-wrapper .contact-inner .contact-content .contact-header .header {

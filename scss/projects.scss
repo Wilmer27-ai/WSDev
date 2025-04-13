@@ -55,7 +55,7 @@
           grid-template-columns: 1fr; // Default to one column
           gap: 20px;
           row-gap: 40px;
-          margin: 20px 25px 30px 25px;
+          margin: 20px 25px 20px 25px;
 
           @include screensize($tablet) {
             grid-template-columns: 1fr 1fr; // Use auto to fit content

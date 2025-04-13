@@ -1,6 +1,8 @@
 @use "scss_partials/general" as *;
 
 #contact {
+  padding: 100px 0; // Add padding to ensure enough height
+  min-height: 400px; // Ensure the section has a minimum height
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
@@ -22,7 +24,7 @@
         margin: 0 auto;
         .contact-header {
           text-align: center;
-          margin: 50px 0 60px 0;
+          margin: 100px 0 60px 0;
           font-family: $font;
 
           .header {
