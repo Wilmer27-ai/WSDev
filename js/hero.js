@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const text = "Web Developer"; // Exclude the "W" from the animation text
     let isReversing = false;
     let currentIndex = 0;
+    let isCursorVisible = true;
 
     function animateText() {
         if (!isReversing) {
@@ -19,11 +20,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        nameElement.innerHTML = "&#9000 " + text.slice(0, currentIndex); // Prepend keyboard icon (&#9000;)
+        nameElement.innerHTML = "<span style='color: black;'>&#128187;</span> " + "<span>" + text.slice(0, currentIndex) + "</span>" + "<span style='color: black; font-weigth: 200px;'>" + (isCursorVisible ? "|" : "") + "</span>"; // Prepend laptop icon (&#128187;) with black color and make only the typing line black
+    }
+
+    function toggleCursor() {
+        isCursorVisible = !isCursorVisible;
     }
 
     // Run the animation every 200ms
     setInterval(animateText, 300);
+
+    // Toggle the blinking cursor every 500ms
+    setInterval(toggleCursor, 500);
 });
 
 //click copy effects

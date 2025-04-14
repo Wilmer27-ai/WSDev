@@ -1,7 +1,7 @@
 @use "scss_partials/general" as *;
 
 #contact {
-  padding: 130px 0 0; // Add padding to ensure enough height
+  padding: 120px 0 ; // Add padding to ensure enough height
   min-height: 400px; // Ensure the section has a minimum height
   opacity: 0;
   transform: translateY(30px);
