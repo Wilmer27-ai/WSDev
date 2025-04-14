@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const nameElement = document.getElementById("name");
-    const text = "eb Developer"; // Exclude the "W" from the animation text
+    const text = "Web Developer"; // Exclude the "W" from the animation text
     let isReversing = false;
     let currentIndex = 0;
 
@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        nameElement.textContent = "W" + text.slice(0, currentIndex); // Always prepend "W"
+        nameElement.innerHTML = "&#9000 " + text.slice(0, currentIndex); // Prepend keyboard icon (&#9000;)
     }
 
     // Run the animation every 200ms
