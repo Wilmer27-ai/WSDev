@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Run the animation every 200ms
-    setInterval(animateText, 200);
+    setInterval(animateText, 300);
 });
 
 //click copy effects
