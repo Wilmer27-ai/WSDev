@@ -6,6 +6,8 @@
   transform: translateY(30px);
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 
+
+
   &.fade-in {
       opacity: 1;
       transform: translateY(0);
@@ -17,6 +19,7 @@
   }
 
   .wrapper {
+   
       .inner {
           max-width: 1200px;
           margin: 0 auto;
