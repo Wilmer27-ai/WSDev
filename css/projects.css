@@ -89,6 +89,7 @@ html {
   gap: 20px;
   row-gap: 40px;
   margin: 20px 25px 20px 25px;
+  align-items: start;
 }
 @media screen and (min-width: 712px) {
   #projects .wrapper .inner .content .projects-list {

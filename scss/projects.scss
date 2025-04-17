@@ -28,27 +28,27 @@
           font-family: $font;
 
           .header {
-              font-size: 2.5rem;
-              font-weight: 700;
-              color: #333;
-              opacity: 0;
-              animation: fadeIn 1s ease-in-out 0.5s forwards;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
           }
 
           .divider {
-              width: 100px;
-              height: 4px;
-              background-color: var(--main-color);
-              margin: 10px auto;
-              margin-bottom: 20px;
-              opacity: 0;
-              animation: fadeIn 1s ease-in-out 0.5s forwards;
+            width: 100px;
+            height: 4px;
+            background-color: var(--main-color);
+            margin: 10px auto;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out 0.5s forwards;
           }
 
           .project-p {
-              margin: 0;
+            margin: 0;
           }
-      }
+        }
 
         .projects-list {
           display: grid;
@@ -56,6 +56,8 @@
           gap: 20px;
           row-gap: 40px;
           margin: 20px 25px 20px 25px;
+          align-items: start;
+
 
           @include screensize($tablet) {
             grid-template-columns: 1fr 1fr; // Use auto to fit content
@@ -64,6 +66,7 @@
           @include screensize($desktop) {
             grid-template-columns: 1fr 1fr 1fr; // Use auto to fit content
           }
+         
 
           .project-card {
             display: inline-block;
@@ -72,7 +75,7 @@
             border-radius: 10px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease, box-shadow 0.3s ease,
-            opacity 0.5s ease;
+              opacity 0.5s ease;
             opacity: 0; // Initially hidden
             transform: translateY(30px);
 
@@ -117,7 +120,6 @@
                 padding: 25px;
               }
 
-
               .project-title {
                 font-size: 1.5rem;
                 font-weight: 200;
@@ -135,56 +137,52 @@
                 display: flex;
                 gap: 15px;
                 flex-wrap: wrap;
-            
+
                 .tech-icon {
-                    font-size: 2rem; // Adjust icon size
-                    color: var(--main-color); // Use your main color
-                    transition: transform 0.3s ease, color 0.3s ease;
-            
-                    &:hover {
-                        transform: scale(1.2); // Enlarge on hover
-                        color: var(--hover-color); // Optional hover color
-                    }
+                  font-size: 2rem; // Adjust icon size
+                  color: var(--main-color); // Use your main color
+                  transition: transform 0.3s ease, color 0.3s ease;
+
+                  &:hover {
+                    transform: scale(1.2); // Enlarge on hover
+                    color: var(--hover-color); // Optional hover color
+                  }
                 }
-            }
+              }
 
-      
+              .view-project-btn {
+                display: inline-block;
+                margin-top: 20px;
+                padding: 8px 18px;
+                background-color: var(--main-color);
+                color: white;
 
-                .view-project-btn {
-                  display: inline-block;
-                  margin-top: 20px;
-                  padding: 8px 18px;
+                text-decoration: none;
+                border-radius: 10px;
+                transition: all 0.5s ease;
+
+                &:hover {
+                  color: #fff;
+                  background-color: var(--hover-color);
+                }
+              }
+
+              .secondary-action-btn {
+                margin-left: 5px;
+                display: inline-block;
+                margin-top: 20px;
+                padding: 8px 18px;
+                color: var(--main-color);
+                text-decoration: none;
+                border-radius: 10px;
+                border: 2px solid var(--main-color);
+                transition: background-color 0.3s ease;
+
+                &:hover {
                   background-color: var(--main-color);
-                  color: white;
-
-                  text-decoration: none;
-                  border-radius: 10px;
-                  transition: all 0.5s ease;
-           
-
-                  &:hover {
-                    color: #fff;
-                    background-color: var(--hover-color);
-                  }
+                  color: #fff;
                 }
-
-                .secondary-action-btn {
-                  margin-left: 5px;
-                  display: inline-block;
-                  margin-top: 20px;
-                  padding: 8px 18px;
-                  color: var(--main-color);
-                  text-decoration: none;
-                  border-radius: 10px;
-                  border: 2px solid var(--main-color);
-                  transition: background-color 0.3s ease;
-
-                  &:hover {
-                    background-color: var(--main-color);
-                color: #fff;
-                  }
-                }
-              
+              }
             }
           }
         }
