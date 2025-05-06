@@ -147,6 +147,9 @@ html {
     text-align: left;
   }
 }
+#about .wrapper .inner .content .about-container .about-me h2 {
+  font-weight: 100;
+}
 #about .wrapper .inner .content .about-container .details {
   display: grid;
   grid-template-columns: 1fr;
