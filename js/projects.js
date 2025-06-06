@@ -1,9 +1,23 @@
 const projects = [
   {
+    title: "Copy Cat",
+    description:
+      "CopyCat is a practice project I developed to simulate an online document printing service. Using HTML, CSS, JavaScript, and Firebase, the platform allows users to upload PDFs, choose print options, and select nearby print shops. It leverages Firebase Realtime Database and Storage to handle user data, print job details, and real-time status updates between users and shop owners.",
+    image: "assets/copycat.webp",
+    techStack: [
+      "fab fa-html5", // HTML icon
+      "fab fa-css3-alt", // CSS icon
+      "fab fa-js", // JavaScript icon
+      "fas fa-database", // Firebase icon
+    ],
+    link: "https://copy-cat-mu.vercel.app/",
+    github: "Not-available-to-public",
+  },
+  {
     title: "Charlzinn Hotel",
     description:
       "Charlzinn Hotel is a hotel website I developed as part of my web development practice. Built using HTML, SCSS, CSS, and JavaScript, it features a responsive and user-friendly interface for showcasing hotel rooms, amenities, and booking information. The project focuses on clean design and smooth user experience, highlighting my frontend development skills.",
-    image: "assets/charlzinn.png",
+    image: "assets/charlzinn.webp",
     techStack: [
       "fab fa-html5", // HTML icon
       "fab fa-css3-alt", // CSS icon
