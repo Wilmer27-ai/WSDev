@@ -89,7 +89,7 @@ const projects = [
 function renderProjects() {
   const projectsList = document.querySelector(".projects-list");
 
-  projects.forEach((project) => {
+  projects.forEach((project, idx) => {
     const projectCard = document.createElement("div");
     projectCard.classList.add(
       "project-card",
@@ -98,29 +98,50 @@ function renderProjects() {
     );
 
     projectCard.innerHTML = `
-            <div class="project-image-container">
-                <img src="${project.image}" alt="${
-      project.title
-    }" class="project-image">
-            </div>
-            <div class="project-details">
-                <h2 class="project-title">${project.title}</h2>
-                <p class="project-description">${project.description}</p>
-                <div class="tech-stack">
-                    ${project.techStack
-                      .map((tech) => `<i class="${tech} tech-icon"></i>`)
-                      .join("")}
-                </div>
-                <a href="${
-                  project.link
-                }" target="_blank" class="view-project-btn">Preview</a>
-                <a href="${
-                  project.github
-                }" target="_blank" class="secondary-action-btn">Github</a>
-            </div>
-        `;
+      <div class="project-image-container">
+        <img src="${project.image}" alt="${project.title}" class="project-image">
+        <span class="view-image-icon" data-img="${project.image}" title="View Image">
+          <i class="fas fa-eye"></i>
+        </span>
+      </div>
+      <div class="project-details">
+        <h2 class="project-title">${project.title}</h2>
+        <p class="project-description">${project.description}</p>
+        <div class="tech-stack">
+          ${project.techStack.map((tech) => `<i class="${tech} tech-icon"></i>`).join("")}
+        </div>
+        <a href="${project.link}" target="_blank" class="view-project-btn">Preview</a>
+        <a href="${project.github}" target="_blank" class="secondary-action-btn">Github</a>
+      </div>
+    `;
 
     projectsList.appendChild(projectCard);
+  });
+
+  // Modal logic
+  if (!document.getElementById("image-modal")) {
+    const modal = document.createElement("div");
+    modal.id = "image-modal";
+    modal.innerHTML = `
+      <div class="modal-backdrop"></div>
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <img src="" alt="Large Project Image" class="modal-img" />
+      </div>
+    `;
+    document.body.appendChild(modal);
+
+    // Close modal on click
+    modal.querySelector(".modal-close").onclick = () => modal.style.display = "none";
+    modal.querySelector(".modal-backdrop").onclick = () => modal.style.display = "none";
+  }
+
+  document.querySelectorAll(".view-image-icon").forEach(icon => {
+    icon.onclick = function () {
+      const modal = document.getElementById("image-modal");
+      modal.querySelector(".modal-img").src = this.getAttribute("data-img");
+      modal.style.display = "flex";
+    };
   });
 }
 
