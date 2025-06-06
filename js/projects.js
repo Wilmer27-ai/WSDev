@@ -1,5 +1,19 @@
 const projects = [
   {
+    title: "Charlzinn Hotel",
+    description:
+      "Charlzinn Hotel is a hotel website I developed as part of my web development practice. Built using HTML, SCSS, CSS, and JavaScript, it features a responsive and user-friendly interface for showcasing hotel rooms, amenities, and booking information. The project focuses on clean design and smooth user experience, highlighting my frontend development skills.",
+    image: "assets/charlzinn.png",
+    techStack: [
+      "fab fa-html5", // HTML icon
+      "fab fa-css3-alt", // CSS icon
+      "fab fa-js", // JavaScript icon
+      "fab fa-sass", // Bootstrap icon
+    ],
+    link: "https://charlzinnhotel.vercel.app/",
+    github: "https://github.com/Wilmer27-ai/charlzinnhotel",
+  },
+  {
     title: "Trash Trade",
     description:
       "TrashTrade is an admin dashboard I developed for our thesis project, 'Gamified Proper Waste Disposal System using Image Recognition with Raspberry Pi and Mobile App Integration.' Built with JavaScript, Bootstrap, and Firebase, it manages users, transactions, and rewards in real-time using Firestore and Authentication.",
