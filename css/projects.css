@@ -124,6 +124,7 @@ html {
 }
 #projects .wrapper .inner .content .projects-list .project-card .project-image-container {
   position: relative;
+  border-radius: 10px;
 }
 #projects .wrapper .inner .content .projects-list .project-card .project-image-container .view-image-icon {
   position: absolute;
