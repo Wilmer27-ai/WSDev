@@ -116,13 +116,11 @@ html {
 }
 #skills .wrapper .inner .content .skills-container .skill-box:hover i {
   transform: scale(1.2);
-  color: var(--hover-color);
 }
 #skills .wrapper .inner .content .skills-container .skill-box i {
   font-size: 3rem;
-  color: var(--main-color);
   margin-bottom: 10px;
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s ease;
 }
 #skills .wrapper .inner .content .skills-container .skill-box p {
   font-family: "Poppins", sans-serif;
