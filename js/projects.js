@@ -16,6 +16,7 @@ const projects = [
       "devicon-vitejs-plain colored", // Vite icon
       "devicon-tailwindcss-original colored", // Tailwind CSS icon
       "devicon-firebase-plain colored", // Firebase icon
+      "devicon-vercel-plain colored", // Vercel icon
     ],
     link: "https://dtc-jobfair.vercel.app/login",
     github: "Not-available-to-public",
@@ -40,6 +41,7 @@ const projects = [
 
       "devicon-tailwindcss-original colored", // Tailwind CSS icon
       "devicon-firebase-plain colored", // Firebase icon
+      "devicon-vercel-plain colored", // Vercel icon
     ],
     link: "https://dtc-jobfair.vercel.app/login",
     github: "Not-available-to-public",
@@ -55,6 +57,7 @@ const projects = [
       "devicon-css3-plain colored", // CSS icon
       "devicon-javascript-plain colored", // JavaScript icon
       "devicon-firebase-plain colored", // Firebase icon
+      "devicon-vercel-plain colored", // Vercel icon
     ],
     link: "https://copy-cat-mu.vercel.app/",
     github: "Not-available-to-public",
